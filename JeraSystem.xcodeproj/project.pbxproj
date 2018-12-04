@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		FCA247F721B6FB4900301E15 /* JeraSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = FCA247F521B6FB4900301E15 /* JeraSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCA2480121B7009F00301E15 /* logo-jera.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA2480021B7009F00301E15 /* logo-jera.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FCA247F221B6FB4900301E15 /* JeraSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JeraSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA247F521B6FB4900301E15 /* JeraSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JeraSystem.h; sourceTree = "<group>"; };
 		FCA247F621B6FB4900301E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCA2480021B7009F00301E15 /* logo-jera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-jera.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +32,7 @@
 		FCA247E821B6FB4900301E15 = {
 			isa = PBXGroup;
 			children = (
-				FCA247F421B6FB4900301E15 /* Source */,
+				FCA247F421B6FB4900301E15 /* Sources */,
 				FCA247F321B6FB4900301E15 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,13 +45,38 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FCA247F421B6FB4900301E15 /* Source */ = {
+		FCA247F421B6FB4900301E15 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				FCA247FE21B7004100301E15 /* assets */,
+				FCA247FD21B6FFBC00301E15 /* classes */,
+				FCA247FF21B7005400301E15 /* supporting files */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		FCA247FD21B6FFBC00301E15 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		FCA247FE21B7004100301E15 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				FCA2480021B7009F00301E15 /* logo-jera.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		FCA247FF21B7005400301E15 /* supporting files */ = {
 			isa = PBXGroup;
 			children = (
 				FCA247F521B6FB4900301E15 /* JeraSystem.h */,
 				FCA247F621B6FB4900301E15 /* Info.plist */,
 			);
-			path = Source;
+			path = "supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCA2480121B7009F00301E15 /* logo-jera.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +295,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/supporting files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -291,7 +319,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/supporting files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
