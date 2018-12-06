@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5799575F21B81CDA002A5D16 /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5799575E21B81CDA002A5D16 /* FlatButton.swift */; };
+		5799576121B8383D002A5D16 /* Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5799576021B8383D002A5D16 /* Corner.swift */; };
+		57DEB16621B9618F001CAD23 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DEB16521B9618F001CAD23 /* UIButtonExtensions.swift */; };
 		FCA247F721B6FB4900301E15 /* JeraSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = FCA247F521B6FB4900301E15 /* JeraSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCA2480121B7009F00301E15 /* logo-jera.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA2480021B7009F00301E15 /* logo-jera.png */; };
 		FCA2480421B704ED00301E15 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2480321B704ED00301E15 /* CardView.swift */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5799575E21B81CDA002A5D16 /* FlatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
+		5799576021B8383D002A5D16 /* Corner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Corner.swift; sourceTree = "<group>"; };
+		57DEB16521B9618F001CAD23 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		FCA247F221B6FB4900301E15 /* JeraSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JeraSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA247F521B6FB4900301E15 /* JeraSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JeraSystem.h; sourceTree = "<group>"; };
 		FCA247F621B6FB4900301E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5799575821B81C76002A5D16 /* buttons */ = {
+			isa = PBXGroup;
+			children = (
+				5799575E21B81CDA002A5D16 /* FlatButton.swift */,
+				57DEB16521B9618F001CAD23 /* UIButtonExtensions.swift */,
+			);
+			path = buttons;
+			sourceTree = "<group>";
+		};
 		FCA247E821B6FB4900301E15 = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				FCA2480921B7165D00301E15 /* settings */,
-				FCA2480721B7155900301E15 /* buttons */,
+				5799575821B81C76002A5D16 /* buttons */,
 				FCA2480221B7032900301E15 /* cards */,
 			);
 			path = classes;
@@ -96,18 +111,12 @@
 			path = cards;
 			sourceTree = "<group>";
 		};
-		FCA2480721B7155900301E15 /* buttons */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = buttons;
-			sourceTree = "<group>";
-		};
 		FCA2480921B7165D00301E15 /* settings */ = {
 			isa = PBXGroup;
 			children = (
 				FCA2480C21B71D5400301E15 /* Theme.swift */,
 				FCA2480E21B71ECA00301E15 /* Shadow.swift */,
+				5799576021B8383D002A5D16 /* Corner.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -194,7 +203,10 @@
 			files = (
 				FCA2480F21B71ECA00301E15 /* Shadow.swift in Sources */,
 				FCA2480421B704ED00301E15 /* CardView.swift in Sources */,
+				5799575F21B81CDA002A5D16 /* FlatButton.swift in Sources */,
+				57DEB16621B9618F001CAD23 /* UIButtonExtensions.swift in Sources */,
 				FCA2480D21B71D5400301E15 /* Theme.swift in Sources */,
+				5799576121B8383D002A5D16 /* Corner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

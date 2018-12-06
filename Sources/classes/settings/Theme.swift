@@ -39,22 +39,22 @@ class ThemeManager {
 
 class DefaultTheme: ThemeColor {
     
-    var primary: UIColor = .white
-    var primaryDark: UIColor = .white
-    var primaryLight: UIColor = .white
+    var primary: UIColor = UIColor(red:0.4, green:0.23, blue:0.72, alpha:1)
+    var primaryDark: UIColor = UIColor(red:0.2, green:0.04, blue:0.53, alpha:1)
+    var primaryLight: UIColor = UIColor(red:0.77, green:0.79, blue:0.91, alpha:1)
     
-    var secondary: UIColor = .white
-    var secondaryDark: UIColor = .white
-    var secondaryLight: UIColor = .white
+    var secondary: UIColor = UIColor(red: 0, green: 0.74, blue: 0.83, alpha: 1)
+    var secondaryDark: UIColor = UIColor(red: 0, green: 0.55, blue: 0.64, alpha: 1)
+    var secondaryLight: UIColor = UIColor(red: 0.38, green: 0.94, blue: 1, alpha: 1)
     
-    var error: UIColor = .white
-    var errorLight: UIColor = .white
+    var error: UIColor = UIColor(red: 0.96, green: 0.26, blue: 0.21, alpha: 1)
+    var errorLight: UIColor = UIColor(red: 0.94, green: 0.6, blue: 0.6, alpha: 1)
     
-    var background: UIColor = .white
+    var background: UIColor = UIColor(red: 0.98, green: 0.98, blue: 0.98, alpha: 1)
     var surface: UIColor = .white
     
-    var gray1: UIColor = .white
-    var gray2: UIColor = .white
-    var gray3: UIColor = .white    
-    var gray4: UIColor = .white
+    var gray1: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.87)
+    var gray2: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.6)
+    var gray3: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.38)
+    var gray4: UIColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.12)
 }
