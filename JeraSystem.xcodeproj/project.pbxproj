@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		571246DF21BAA0BD00C932DA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571246DE21BAA0BD00C932DA /* Font.swift */; };
 		FCA247F721B6FB4900301E15 /* JeraSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = FCA247F521B6FB4900301E15 /* JeraSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCA2480121B7009F00301E15 /* logo-jera.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA2480021B7009F00301E15 /* logo-jera.png */; };
 		FCA2480421B704ED00301E15 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2480321B704ED00301E15 /* CardView.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		571246DE21BAA0BD00C932DA /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		FCA247F221B6FB4900301E15 /* JeraSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JeraSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA247F521B6FB4900301E15 /* JeraSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JeraSystem.h; sourceTree = "<group>"; };
 		FCA247F621B6FB4900301E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			children = (
 				FCA2480C21B71D5400301E15 /* Theme.swift */,
 				FCA2480E21B71ECA00301E15 /* Shadow.swift */,
+				571246DE21BAA0BD00C932DA /* Font.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				FCA2480F21B71ECA00301E15 /* Shadow.swift in Sources */,
 				FCA2480421B704ED00301E15 /* CardView.swift in Sources */,
 				FCA2480D21B71D5400301E15 /* Theme.swift in Sources */,
+				571246DF21BAA0BD00C932DA /* Font.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
