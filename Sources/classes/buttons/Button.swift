@@ -1,17 +1,31 @@
 //
-//  UIButtonExtensions.swift
+//  Button.swift
 //  JeraSystem
 //
-//  Created by Victor Pereira on 06/12/18.
+//  Created by Vitor Mesquita on 10/12/18.
 //  Copyright © 2018 Vitor Mesquita. All rights reserved.
 //
 
 import UIKit
 
-extension UIButton: CAAnimationDelegate {
+@IBDesignable
+class Button: UIButton {
     
-    open override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+    init() {
+        super.init(frame: .zero)
+        prepare()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        prepare()
+    }
+
+    internal func prepare() {
         
+    }
+    
+    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         let tapLocation = touch.location(in: self)
         let initialSize: CGFloat = 10.0
         
@@ -22,7 +36,7 @@ extension UIButton: CAAnimationDelegate {
         animationLayer.position = tapLocation
         
         let basicAnimation = CABasicAnimation(keyPath: "transform.scale")
-        basicAnimation.toValue = 40
+        basicAnimation.toValue = self.bounds.size.height
         
         let fadeAnimation = CAKeyframeAnimation(keyPath: "opacity")
         fadeAnimation.values = [0.32, 0.16, 0.08]
@@ -40,7 +54,10 @@ extension UIButton: CAAnimationDelegate {
         
         return true
     }
-    
+}
+
+extension Button: CAAnimationDelegate {
+ 
     public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         let layer: CALayer? = anim.value(forKeyPath: "animationLayer") as? CALayer
         if layer != nil{

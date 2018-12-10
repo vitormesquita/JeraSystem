@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		571246DF21BAA0BD00C932DA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571246DE21BAA0BD00C932DA /* Font.swift */; };
 		571DAC7321BE9C9F00BC8E2E /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DAC6E21BE9C9F00BC8E2E /* FlatButton.swift */; };
-		571DAC7421BE9C9F00BC8E2E /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DAC6F21BE9C9F00BC8E2E /* UIButtonExtensions.swift */; };
 		571DAC7521BE9C9F00BC8E2E /* FullButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DAC7021BE9C9F00BC8E2E /* FullButton.swift */; };
 		571DAC7621BE9C9F00BC8E2E /* DottedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DAC7121BE9C9F00BC8E2E /* DottedButton.swift */; };
 		571DAC7721BE9C9F00BC8E2E /* GhostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DAC7221BE9C9F00BC8E2E /* GhostButton.swift */; };
+		FC78E47C21BEE44D00BC5DC0 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC78E47B21BEE44D00BC5DC0 /* Button.swift */; };
 		FCA247F721B6FB4900301E15 /* JeraSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = FCA247F521B6FB4900301E15 /* JeraSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCA2480121B7009F00301E15 /* logo-jera.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA2480021B7009F00301E15 /* logo-jera.png */; };
 		FCA2480421B704ED00301E15 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2480321B704ED00301E15 /* CardView.swift */; };
@@ -23,10 +23,10 @@
 /* Begin PBXFileReference section */
 		571246DE21BAA0BD00C932DA /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		571DAC6E21BE9C9F00BC8E2E /* FlatButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
-		571DAC6F21BE9C9F00BC8E2E /* UIButtonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		571DAC7021BE9C9F00BC8E2E /* FullButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullButton.swift; sourceTree = "<group>"; };
-		571DAC7121BE9C9F00BC8E2E /* DottedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DottedButton.swift; path = ../../../../../projects/LearningSwift/LearningSwift/buttons/DottedButton.swift; sourceTree = "<group>"; };
+		571DAC7121BE9C9F00BC8E2E /* DottedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DottedButton.swift; sourceTree = "<group>"; };
 		571DAC7221BE9C9F00BC8E2E /* GhostButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GhostButton.swift; sourceTree = "<group>"; };
+		FC78E47B21BEE44D00BC5DC0 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		FCA247F221B6FB4900301E15 /* JeraSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JeraSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA247F521B6FB4900301E15 /* JeraSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JeraSystem.h; sourceTree = "<group>"; };
 		FCA247F621B6FB4900301E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 		FCA2480721B7155900301E15 /* buttons */ = {
 			isa = PBXGroup;
 			children = (
-				571DAC6F21BE9C9F00BC8E2E /* UIButtonExtensions.swift */,
+				FC78E47B21BEE44D00BC5DC0 /* Button.swift */,
 				571DAC6E21BE9C9F00BC8E2E /* FlatButton.swift */,
 				571DAC7221BE9C9F00BC8E2E /* GhostButton.swift */,
 				571DAC7121BE9C9F00BC8E2E /* DottedButton.swift */,
@@ -215,7 +215,7 @@
 				571DAC7521BE9C9F00BC8E2E /* FullButton.swift in Sources */,
 				FCA2480421B704ED00301E15 /* CardView.swift in Sources */,
 				571DAC7321BE9C9F00BC8E2E /* FlatButton.swift in Sources */,
-				571DAC7421BE9C9F00BC8E2E /* UIButtonExtensions.swift in Sources */,
+				FC78E47C21BEE44D00BC5DC0 /* Button.swift in Sources */,
 				571DAC7621BE9C9F00BC8E2E /* DottedButton.swift in Sources */,
 				FCA2480D21B71D5400301E15 /* Theme.swift in Sources */,
 				571246DF21BAA0BD00C932DA /* Font.swift in Sources */,

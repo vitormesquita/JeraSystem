@@ -29,15 +29,15 @@ class CardView: UIView {
  
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        setup()
+        prepare()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup()
+        prepare()
     }
     
-    private func setup() {
+    internal func prepare() {
         self.addSubview(containerView)
         
         containerView.layer.cornerRadius = 4
@@ -47,7 +47,12 @@ class CardView: UIView {
         configureContainerShadow()
         configureContainerConstraints()
     }
+}
+
+extension CardView {
     
+    /**
+     */
     private func configureContainerConstraints() {
         NSLayoutConstraint.deactivate(containerConstraints)
         
@@ -61,6 +66,8 @@ class CardView: UIView {
         NSLayoutConstraint.activate(containerConstraints)
     }
     
+    /**
+     */
     private func configureContainerShadow() {
         containerView.layer.shadowOpacity = shadow.opacity
         containerView.layer.shadowOffset = shadow.offeset
