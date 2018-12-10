@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5707462621BEE6CC005A925C /* Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5707462521BEE6CC005A925C /* Corner.swift */; };
 		571246DF21BAA0BD00C932DA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571246DE21BAA0BD00C932DA /* Font.swift */; };
 		571DAC7321BE9C9F00BC8E2E /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DAC6E21BE9C9F00BC8E2E /* FlatButton.swift */; };
 		571DAC7421BE9C9F00BC8E2E /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DAC6F21BE9C9F00BC8E2E /* UIButtonExtensions.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5707462521BEE6CC005A925C /* Corner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Corner.swift; sourceTree = "<group>"; };
 		571246DE21BAA0BD00C932DA /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		571DAC6E21BE9C9F00BC8E2E /* FlatButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
 		571DAC6F21BE9C9F00BC8E2E /* UIButtonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		FCA2480921B7165D00301E15 /* settings */ = {
 			isa = PBXGroup;
 			children = (
+				5707462521BEE6CC005A925C /* Corner.swift */,
 				FCA2480C21B71D5400301E15 /* Theme.swift */,
 				FCA2480E21B71ECA00301E15 /* Shadow.swift */,
 				571246DE21BAA0BD00C932DA /* Font.swift */,
@@ -214,6 +217,7 @@
 				571DAC7721BE9C9F00BC8E2E /* GhostButton.swift in Sources */,
 				571DAC7521BE9C9F00BC8E2E /* FullButton.swift in Sources */,
 				FCA2480421B704ED00301E15 /* CardView.swift in Sources */,
+				5707462621BEE6CC005A925C /* Corner.swift in Sources */,
 				571DAC7321BE9C9F00BC8E2E /* FlatButton.swift in Sources */,
 				571DAC7421BE9C9F00BC8E2E /* UIButtonExtensions.swift in Sources */,
 				571DAC7621BE9C9F00BC8E2E /* DottedButton.swift in Sources */,
