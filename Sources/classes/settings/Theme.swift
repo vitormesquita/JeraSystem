@@ -35,6 +35,7 @@ class ThemeManager {
     static let shared = ThemeManager()
     
     private(set) var color: ThemeColor = DefaultTheme()
+    private(set) var font: FontTheme = DefaultFontTheme()
 }
 
 class DefaultTheme: ThemeColor {
