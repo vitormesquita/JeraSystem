@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57AEB6D121C04FCF001DCE28 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57AEB6D021C04FCF001DCE28 /* Input.swift */; };
+		57AEB6D321C0501C001DCE28 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57AEB6D221C0501C001DCE28 /* View.xib */; };
 		FCA247F721B6FB4900301E15 /* JeraSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = FCA247F521B6FB4900301E15 /* JeraSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCA2480121B7009F00301E15 /* logo-jera.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA2480021B7009F00301E15 /* logo-jera.png */; };
 		FCA2480421B704ED00301E15 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2480321B704ED00301E15 /* CardView.swift */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57AEB6D021C04FCF001DCE28 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		57AEB6D221C0501C001DCE28 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		FCA247F221B6FB4900301E15 /* JeraSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JeraSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA247F521B6FB4900301E15 /* JeraSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JeraSystem.h; sourceTree = "<group>"; };
 		FCA247F621B6FB4900301E15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57AEB6CF21C04F7D001DCE28 /* input */ = {
+			isa = PBXGroup;
+			children = (
+				57AEB6D021C04FCF001DCE28 /* Input.swift */,
+				57AEB6D221C0501C001DCE28 /* View.xib */,
+			);
+			path = input;
+			sourceTree = "<group>";
+		};
 		FCA247E821B6FB4900301E15 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +77,7 @@
 		FCA247FD21B6FFBC00301E15 /* classes */ = {
 			isa = PBXGroup;
 			children = (
+				57AEB6CF21C04F7D001DCE28 /* input */,
 				FCA2480921B7165D00301E15 /* settings */,
 				FCA2480721B7155900301E15 /* buttons */,
 				FCA2480221B7032900301E15 /* cards */,
@@ -181,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57AEB6D321C0501C001DCE28 /* View.xib in Resources */,
 				FCA2480121B7009F00301E15 /* logo-jera.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +209,7 @@
 			files = (
 				FCA2480F21B71ECA00301E15 /* Shadow.swift in Sources */,
 				FCA2480421B704ED00301E15 /* CardView.swift in Sources */,
+				57AEB6D121C04FCF001DCE28 /* Input.swift in Sources */,
 				FCA2480D21B71D5400301E15 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
