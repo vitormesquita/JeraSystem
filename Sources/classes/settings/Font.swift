@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol FontTheme {
+protocol ThemeFont {
     
     var headline1: UIFont { get }
     var headline2: UIFont { get }
@@ -28,7 +28,7 @@ protocol FontTheme {
     var caption: UIFont { get }
 }
 
-class DefaultFontTheme: FontTheme {
+class DefaultFontTheme: ThemeFont {
 
     lazy var headline1 = UIFont.systemFont(ofSize: 96)
     lazy var headline2 = UIFont.systemFont(ofSize: 60, weight: UIFont.Weight(300))

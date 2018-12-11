@@ -8,22 +8,9 @@
 
 import UIKit
 
-enum Corner {
+public enum Corner {
     
     case none
     case simple
     case circle
-    
-    var offset: CGFloat {
-        switch self {
-        case .none:
-            return 0
-            
-        case .simple:
-            return 4
-            
-        case .circle:
-            return 24
-        }
-    }
 }

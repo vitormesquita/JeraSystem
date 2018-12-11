@@ -9,60 +9,76 @@
 import UIKit
 
 @IBDesignable
-class Button: UIButton {
+open class Button: UIButton {
     
-    init() {
-        super.init(frame: .zero)
+    private var pulse: Pulse!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         prepare()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         prepare()
     }
-
-    internal func prepare() {
-        
+    
+    func getCornerRadiusByType() -> CGFloat {
+        switch cornerRadius {
+        case .none:
+            return 0
+            
+        case .simple:
+            return 4
+            
+        case .circle:
+            return self.bounds.size.height / 2
+        }
     }
     
-    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        let tapLocation = touch.location(in: self)
-        let initialSize: CGFloat = 10.0
+    //MARK: - open
+    
+    @IBInspectable
+    open var image: UIImage? {
+        didSet {
+            setImage(image, for: .normal)
+            setImage(image, for: .selected)
+            setImage(image, for: .highlighted)
+            setImage(image, for: .disabled)
+            
+            if #available(iOS 9, *) {
+                setImage(image, for: .application)
+                setImage(image, for: .focused)
+                setImage(image, for: .reserved)
+            }
+        }
+    }
+    
+    open var cornerRadius: Corner = Corner.simple {
+        didSet {
+            layer.cornerRadius = getCornerRadiusByType()
+        }
+    }
+    
+    open func prepare() {
+        pulse = Pulse(layer: self.layer)
         
-        let animationLayer = CALayer()
-        animationLayer.backgroundColor = ThemeManager.shared.color.primaryLight.cgColor
-        animationLayer.frame = CGRect(x: 0, y: 0, width: initialSize, height: initialSize)
-        animationLayer.cornerRadius = initialSize/2
-        animationLayer.position = tapLocation
-        
-        let basicAnimation = CABasicAnimation(keyPath: "transform.scale")
-        basicAnimation.toValue = self.bounds.size.height
-        
-        let fadeAnimation = CAKeyframeAnimation(keyPath: "opacity")
-        fadeAnimation.values = [0.32, 0.16, 0.08]
-        
-        let animationGroup = CAAnimationGroup()
-        animationGroup.delegate = self
-        animationGroup.duration = 0.5
-        animationGroup.animations = [basicAnimation, fadeAnimation]
-        animationGroup.setValue(animationLayer, forKey: "animationLayer")
-        
-        animationLayer.add(animationGroup, forKey: "animationGroup")
-        
-        self.layer.insertSublayer(animationLayer, below: self.titleLabel?.layer)
-        self.layer.masksToBounds = true
-        
-        return true
+        semanticContentAttribute = .forceLeftToRight
+        layer.cornerRadius = getCornerRadiusByType()
+        tintColor = ThemeManager.shared.color.primary
     }
 }
 
+// MARK: - Pulse animation
 extension Button: CAAnimationDelegate {
- 
-    public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        let layer: CALayer? = anim.value(forKeyPath: "animationLayer") as? CALayer
-        if layer != nil{
-            layer?.removeAnimation(forKey: "scale")
-            layer?.removeFromSuperlayer()
-        }
+    
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        pulse.expand(frame: self.bounds)
+    }
+    
+    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        pulse.contract()
     }
 }

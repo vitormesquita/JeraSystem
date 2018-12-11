@@ -6,44 +6,40 @@
 //  Copyright © 2018 Vitor Mesquita. All rights reserved.
 //
 
-
 import UIKit
 
 @IBDesignable
-class DottedButton: FlatButton {
+public class DottedButton: FlatButton {
     
-    @IBInspectable
-    var cornerRadius: CGFloat = Corner.simple.offset {
-        didSet {
-            layer.cornerRadius = cornerRadius
-        }
-    }
+    private var dottedPath: UIBezierPath?
     
-    @IBInspectable
-    var borderWidth: CGFloat = 1 {
-        didSet {
-            layer.borderWidth = borderWidth
-        }
-    }
-    
-    @IBInspectable
-    var borderColor: UIColor = ThemeManager.shared.color.primary {
-        didSet {
-            layer.borderColor = borderColor.cgColor
-        }
-    }
-    
-    override func draw(_ rect: CGRect) {
+    override public func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        let path = UIBezierPath(roundedRect: rect, cornerRadius: cornerRadius)
-        path.lineWidth = borderWidth
+        dottedPath = UIBezierPath(roundedRect: rect, cornerRadius: getCornerRadiusByType())
         
-        borderColor.setStroke()
+        borderWidth = 1
+        borderColor = ThemeManager.shared.color.primary
+        
+        borderColor?.setStroke()
         
         let dashPattern: [CGFloat] = [4, 4]
-        path.setLineDash(dashPattern, count: 2, phase: 0)
-        path.stroke()
+        dottedPath?.setLineDash(dashPattern, count: 2, phase: 0)
+        dottedPath?.stroke()
+    }
+}
+
+extension DottedButton {
+    
+    @IBInspectable
+    open var borderWidth: CGFloat {
+        get { return dottedPath?.lineWidth ?? 1 }
+        set { dottedPath?.lineWidth = newValue }
     }
     
+    @IBInspectable
+    open var borderColor: UIColor? {
+        get { return layer.borderColor != nil ? UIColor(cgColor: layer.borderColor!) : nil }
+        set { layer.borderColor = newValue?.cgColor }
+    }
 }
