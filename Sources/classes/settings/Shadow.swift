@@ -11,7 +11,7 @@ import UIKit
 /**
  
  */
-enum Shadow {
+public enum Shadow {
     
     case none
     case shadow1
