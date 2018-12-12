@@ -33,6 +33,8 @@ class Input: UITextField {
     
     internal var status: InputStatus = .none
     
+    
+    
     private lazy var message: UILabel = {
        let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
