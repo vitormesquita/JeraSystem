@@ -11,19 +11,18 @@ import UIKit
 @IBDesignable
 class CardView: UIView {
     
-    private let containerView = UIView()
-    private var containerConstraints = [NSLayoutConstraint]()
+    internal var configurableConstraints = [NSLayoutConstraint]()
     
     @IBInspectable
-    var margin: CGFloat = 16 {
+    var cornerRadius: CGFloat = 4 {
         didSet {
-            configureContainerConstraints()
+            layer.cornerRadius = cornerRadius
         }
     }
     
     var shadow: Shadow = .shadow12 {
         didSet {
-            configureContainerShadow()
+            configureShadow()
         }
     }
  
@@ -38,38 +37,22 @@ class CardView: UIView {
     }
     
     internal func prepare() {
-        self.addSubview(containerView)
+        backgroundColor = ThemeManager.shared.color.background
+        layer.cornerRadius = cornerRadius
         
-        containerView.layer.cornerRadius = 4
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.backgroundColor = ThemeManager.shared.color.background
-        
-        configureContainerShadow()
-        configureContainerConstraints()
+        configureShadow()
+        configureConstraints()
     }
+    
+    internal func configureConstraints() {}
 }
 
 extension CardView {
     
     /**
      */
-    private func configureContainerConstraints() {
-        NSLayoutConstraint.deactivate(containerConstraints)
-        
-        containerConstraints = [
-            containerView.topAnchor.constraint(equalTo: self.topAnchor, constant: margin),
-            containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -margin),
-            containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: margin),
-            containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -margin)
-        ]
-        
-        NSLayoutConstraint.activate(containerConstraints)
-    }
-    
-    /**
-     */
-    private func configureContainerShadow() {
-        containerView.layer.shadowOpacity = shadow.opacity
-        containerView.layer.shadowOffset = shadow.offeset
+    private func configureShadow() {
+        layer.shadowOpacity = shadow.opacity
+        layer.shadowOffset = shadow.offeset
     }
 }

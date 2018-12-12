@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="890"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDo-Pq-10F" customClass="CardView" customModule="JeraSystem" customModuleProvider="target">
+                    <rect key="frame" x="16" y="36" width="343" height="20"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="3Mr-pY-gQ1"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S4b-HX-ebV" customClass="SimpleCard" customModule="JeraSystem" customModuleProvider="target">
+                    <rect key="frame" x="16" y="72" width="343" height="92"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ENF-Xd-J5r" customClass="Card2" customModule="JeraSystem" customModuleProvider="target">
+                    <rect key="frame" x="16" y="180" width="343" height="125.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="avatarHeight">
+                            <real key="value" value="43"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFr-Td-6Ks" customClass="Card3" customModule="JeraSystem" customModuleProvider="target">
+                    <rect key="frame" x="16" y="321.5" width="343" height="421"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="CFr-Td-6Ks" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="1aA-a9-GHr"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CFr-Td-6Ks" secondAttribute="trailing" constant="16" id="6lm-Z2-LcJ"/>
+                <constraint firstItem="S4b-HX-ebV" firstAttribute="top" secondItem="fDo-Pq-10F" secondAttribute="bottom" constant="16" id="Asb-R9-Qbv"/>
+                <constraint firstItem="ENF-Xd-J5r" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="180" id="BH4-9r-iDm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ENF-Xd-J5r" secondAttribute="trailing" constant="16" id="HO7-Bw-R6H"/>
+                <constraint firstItem="ENF-Xd-J5r" firstAttribute="top" secondItem="S4b-HX-ebV" secondAttribute="bottom" constant="16" id="OM7-sp-Si0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="S4b-HX-ebV" secondAttribute="trailing" constant="16" id="Tnq-OX-pI6"/>
+                <constraint firstItem="ENF-Xd-J5r" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Vd5-U3-9UV"/>
+                <constraint firstItem="fDo-Pq-10F" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="lRW-V1-SRW"/>
+                <constraint firstItem="fDo-Pq-10F" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="nqp-mg-P4F"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="CFr-Td-6Ks" secondAttribute="bottom" constant="100" id="sHw-sS-7jN"/>
+                <constraint firstItem="CFr-Td-6Ks" firstAttribute="top" secondItem="ENF-Xd-J5r" secondAttribute="bottom" constant="16" id="sls-L8-p3B"/>
+                <constraint firstItem="S4b-HX-ebV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="wWx-zd-cfI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fDo-Pq-10F" secondAttribute="trailing" constant="16" id="z5L-VG-U6H"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="39.200000000000003" y="146.62668665667167"/>
+        </view>
+    </objects>
+</document>
