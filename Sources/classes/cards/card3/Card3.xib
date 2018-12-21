@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Card3" customModule="JeraSystem" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Card3" customModule="LearningSwift" customModuleProvider="target">
             <connections>
                 <outlet property="bodyLabel" destination="pcA-eR-fqh" id="ZlP-m8-3th"/>
                 <outlet property="button" destination="Lve-em-NQy" id="JIj-5b-oY8"/>
@@ -21,29 +21,29 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="569" height="474"/>
+            <rect key="frame" x="0.0" y="0.0" width="376" height="474"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1n0-Yc-R40">
-                    <rect key="frame" x="0.0" y="0.0" width="569" height="240"/>
+                    <rect key="frame" x="0.0" y="0.0" width="376" height="240"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="240" id="u76-85-W7F"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7U-jI-4Zh">
-                    <rect key="frame" x="16" y="263" width="537" height="21"/>
+                    <rect key="frame" x="16" y="263" width="344" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcA-eR-fqh">
-                    <rect key="frame" x="16" y="308" width="537" height="73"/>
+                    <rect key="frame" x="16" y="308" width="344" height="73"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lve-em-NQy" customClass="RaisedButton" customModule="JeraSystem" customModuleProvider="target">
-                    <rect key="frame" x="16" y="402" width="537" height="48"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lve-em-NQy" customClass="RaisedButton" customModule="LearningSwift" customModuleProvider="target">
+                    <rect key="frame" x="16" y="402" width="344" height="48"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="exe-KR-9U3"/>
                     </constraints>
@@ -68,7 +68,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-127.2" y="-277.9610194902549"/>
+            <point key="canvasLocation" x="-281.60000000000002" y="-277.9610194902549"/>
         </view>
     </objects>
 </document>
