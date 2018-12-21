@@ -271,7 +271,6 @@
 			isa = PBXGroup;
 			children = (
 				57BFC8EB21CD3F94007A8B9E /* cards */,
-				FCF2F41821BF0049008748F3 /* Pulse.swift */,
 				FCA2480921B7165D00301E15 /* settings */,
 				FCA2480721B7155900301E15 /* buttons */,
 			);
@@ -314,6 +313,7 @@
 				571246DE21BAA0BD00C932DA /* Font.swift */,
 				5707462521BEE6CC005A925C /* Corner.swift */,
 				FCA2480E21B71ECA00301E15 /* Shadow.swift */,
+				FCF2F41821BF0049008748F3 /* Pulse.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
