@@ -30,6 +30,7 @@ class Card13: CardView {
         }
     }
     
+    /// The image height.
     @IBInspectable
     open var imageHeight: CGFloat = 240 {
         didSet {
@@ -38,6 +39,7 @@ class Card13: CardView {
         }
     }
     
+    /// The image width.
     @IBInspectable
     open var imageWidth: CGFloat = 240 {
         didSet {

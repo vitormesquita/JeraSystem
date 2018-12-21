@@ -33,6 +33,7 @@ class Card5: CardView {
         }
     }
     
+    /// The image height.
     @IBInspectable
     open var imageHeight: CGFloat = 240 {
         didSet {

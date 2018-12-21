@@ -23,6 +23,7 @@ class Card6: CardView {
     @IBOutlet weak var imageConstraintHeight: NSLayoutConstraint!
     
     // MARK: - Inspectable
+    /// The image height.
     @IBInspectable
     open var imageHeight: CGFloat = 240 {
         didSet {
