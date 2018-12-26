@@ -1,6 +1,6 @@
 //
 //  Card2.swift
-//  JeraSystem
+//  JeraSystem`
 //
 //  Created by Victor Pereira on 12/12/18.
 //  Copyright © 2018 Vitor Mesquita. All rights reserved.

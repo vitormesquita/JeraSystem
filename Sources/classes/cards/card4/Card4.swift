@@ -10,6 +10,7 @@ import UIKit
 
 /**
  A card with image, avatar, title and clickable image.
+ Needs a callback implementation.
  */
 @IBDesignable
 class Card4: CardView {
@@ -113,18 +114,7 @@ class Card4: CardView {
             titleLabel.textColor = titleColor
         }
     }
-    
-    // MARK: - Init
-    init(callback: Card4Protocol) {
-        super.init(frame: .zero)
-        
-        self.callback = callback
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
+
     // MARK: - Override
     override var nibName: String? {
         get {

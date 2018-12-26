@@ -30,7 +30,7 @@ class CardView: UIView {
     open var cornerRadius: CGFloat = 8 {
         didSet {
             layer.cornerRadius = cornerRadius
-            
+    
             guard let contentView = contentView else { return }
             contentView.layer.cornerRadius = cornerRadius
         }
@@ -56,11 +56,11 @@ class CardView: UIView {
     
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
-        prepare()
-        contentView?.prepareForInterfaceBuilder()
-        
         // Necessary to correctly render
         translatesAutoresizingMaskIntoConstraints = true
+        
+        prepare()
+        contentView?.prepareForInterfaceBuilder()
     }
     
     // MARK: - Internal
@@ -79,6 +79,8 @@ class CardView: UIView {
         guard let contentView = (nib.instantiate(withOwner: self, options: nil).first as? UIView) else { return }
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        contentView.layer.cornerRadius = cornerRadius
+        contentView.clipsToBounds = true
         contentView.backgroundColor = .clear
         
         addSubview(contentView)

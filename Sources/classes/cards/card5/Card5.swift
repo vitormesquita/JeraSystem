@@ -9,7 +9,8 @@
 import UIKit
 
 /**
- A card with image, body, clickable image and button
+ A card with image, body, clickable image and button.
+ Needs a callback implementation.
  */
 @IBDesignable
 class Card5: CardView {
@@ -103,17 +104,6 @@ class Card5: CardView {
         didSet {
             bodyLabel.textColor = bodyColor
         }
-    }
-    
-    // MARK: - Init
-    init(callback: Card5Protocol) {
-        super.init(frame: .zero)
-        
-        self.callback = callback
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
     }
     
     //MARK: - Override

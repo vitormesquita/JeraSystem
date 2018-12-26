@@ -21,7 +21,7 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="272" height="118"/>
+            <rect key="frame" x="0.0" y="0.0" width="272" height="122"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bd-tR-mrF">
@@ -37,11 +37,14 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgX-SQ-B13" customClass="FlatButton" customModule="LearningSwift" customModuleProvider="target">
-                    <rect key="frame" x="8" y="78" width="46" height="32"/>
+                    <rect key="frame" x="8" y="78" width="46" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="gbj-GM-497"/>
+                    </constraints>
                     <state key="normal" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we5-rv-Smt" customClass="FlatButton" customModule="LearningSwift" customModuleProvider="target">
-                    <rect key="frame" x="62" y="79" width="46" height="30"/>
+                    <rect key="frame" x="62" y="78" width="46" height="36"/>
                     <state key="normal" title="Button"/>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1RW-tL-1zF">
@@ -59,8 +62,10 @@
                 <constraint firstItem="15L-TC-Hb1" firstAttribute="leading" secondItem="9bd-tR-mrF" secondAttribute="leading" id="1Yz-V2-eDR"/>
                 <constraint firstItem="9bd-tR-mrF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="1nn-49-S4y"/>
                 <constraint firstItem="we5-rv-Smt" firstAttribute="centerY" secondItem="HgX-SQ-B13" secondAttribute="centerY" id="6yv-Me-SeR"/>
+                <constraint firstItem="we5-rv-Smt" firstAttribute="top" secondItem="HgX-SQ-B13" secondAttribute="top" id="Hz1-pb-ZcW"/>
                 <constraint firstItem="HgX-SQ-B13" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="M02-Z3-urK"/>
                 <constraint firstItem="we5-rv-Smt" firstAttribute="leading" secondItem="HgX-SQ-B13" secondAttribute="trailing" constant="8" id="Q9n-Kn-ztg"/>
+                <constraint firstItem="we5-rv-Smt" firstAttribute="bottom" secondItem="HgX-SQ-B13" secondAttribute="bottom" id="V7h-PC-bR4"/>
                 <constraint firstItem="15L-TC-Hb1" firstAttribute="trailing" secondItem="9bd-tR-mrF" secondAttribute="trailing" id="XkB-Ct-gWf"/>
                 <constraint firstItem="HgX-SQ-B13" firstAttribute="top" secondItem="15L-TC-Hb1" secondAttribute="bottom" constant="15" id="ZU2-3C-Dzw"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="HgX-SQ-B13" secondAttribute="bottom" constant="8" id="hZr-KZ-br1"/>

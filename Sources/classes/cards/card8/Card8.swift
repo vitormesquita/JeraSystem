@@ -9,7 +9,8 @@
 import UIKit
 
 /**
- A card with overline, title, body, image and clickable image
+ A card with overline, title, body, image and clickable image.
+ Needs a callback implementation.
  */
 @IBDesignable
 class Card8: CardView {
@@ -135,17 +136,6 @@ class Card8: CardView {
         didSet {
             clickableImageView.image = clickableImage
         }
-    }
-    
-    // MARK: - Init
-    init(callback: Card8Protocol) {
-        super.init(frame: .zero)
-        
-        self.callback = callback
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
     }
     
     // MARK: - Override

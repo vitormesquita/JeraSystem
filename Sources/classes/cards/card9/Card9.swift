@@ -9,7 +9,8 @@
 import UIKit
 
 /**
- A card with title, body, image and two buttons
+ A card with title, body, image and two buttons.
+ Needs a callback implementation.
  */
 @IBDesignable
 class Card9: CardView {
@@ -44,14 +45,14 @@ class Card9: CardView {
     @IBInspectable
     open var leftButtonTitle: String = "Button" {
         didSet {
-            leftButton.setTitle(leftButtonTitle, for: .normal)
+            setLeftButtonTitle()
         }
     }
     
     @IBInspectable
     open var rightButtonTitle: String = "Button" {
         didSet {
-            rightButton.setTitle(rightButtonTitle, for: .normal)
+            setRightButtonTitle()
         }
     }
     
@@ -111,17 +112,6 @@ class Card9: CardView {
         }
     }
     
-    // MARK: - Init
-    init(callback: Card9Protocol) {
-        super.init(frame: .zero)
-        
-        self.callback = callback
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     // MARK: - Override
     override var nibName: String? {
         get {
@@ -146,11 +136,34 @@ class Card9: CardView {
         bodyLabel.text = bodyText
         
         
-        leftButton.setTitle(leftButtonTitle, for: .normal)
+        setLeftButtonTitle()
         leftButton.addTarget(self, action: #selector(onLeftButtonClick), for: .touchUpInside)
         
-        rightButton.setTitle(leftButtonTitle, for: .normal)
+        setRightButtonTitle()
         rightButton.addTarget(self, action: #selector(onRightButtonClick), for: .touchUpInside)
+        
+    }
+
+    // MARK: - Private
+    private var leftButtonConstraints = [NSLayoutConstraint]()
+    private var rightButtonConstraints = [NSLayoutConstraint]()
+    
+    private func setLeftButtonTitle() {
+        NSLayoutConstraint.deactivate(leftButtonConstraints)
+        
+        leftButton.setTitle(leftButtonTitle, for: .normal)
+        leftButtonConstraints = [leftButton.widthAnchor.constraint(equalToConstant: leftButton.intrinsicContentSize.width + 16)]
+        
+        NSLayoutConstraint.activate(leftButtonConstraints)
+    }
+    
+    private func setRightButtonTitle() {
+        NSLayoutConstraint.deactivate(rightButtonConstraints)
+        
+        rightButton.setTitle(rightButtonTitle, for: .normal)
+        rightButtonConstraints = [rightButton.widthAnchor.constraint(equalToConstant: rightButton.intrinsicContentSize.width + 16)]
+        
+        NSLayoutConstraint.activate(rightButtonConstraints)
     }
 }
 

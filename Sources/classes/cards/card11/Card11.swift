@@ -9,7 +9,8 @@
 import UIKit
 
 /**
- A card with avatar, title, subtitle, clickable image, image, body and two buttons
+ A card with avatar, title, subtitle, clickable image, image, body and two buttons.
+ Needs a callback implementation.
  */
 @IBDesignable
 class Card11: CardView {
@@ -53,6 +54,14 @@ class Card11: CardView {
         }
     }
     
+    /// The maximum number of lines to use for rendering text.
+    @IBInspectable
+    open var subtitleNumberOfLines: Int = 1 {
+        didSet {
+            subtitleLabel.numberOfLines = subtitleNumberOfLines
+        }
+    }
+    
     /// The view's background color.
     @IBInspectable
     open var imageBackgroundColor: UIColor = ThemeManager.shared.color.gray4 {
@@ -72,14 +81,14 @@ class Card11: CardView {
     @IBInspectable
     open var leftButtonTitle: String = "Button" {
         didSet {
-            leftButton.setTitle(leftButtonTitle, for: .normal)
+            setLeftButtonTitle()
         }
     }
     
     @IBInspectable
     open var rightButtonTitle: String = "Button" {
         didSet {
-            rightButton.setTitle(rightButtonTitle, for: .normal)
+            setRightButtonTitle()
         }
     }
     
@@ -112,6 +121,14 @@ class Card11: CardView {
     open var titleColor: UIColor = ThemeManager.shared.color.gray2 {
         didSet {
             titleLabel.textColor = titleColor
+        }
+    }
+    
+    /// The maximum number of lines to use for rendering text.
+    @IBInspectable
+    open var titleNumberOfLines: Int = 1 {
+        didSet {
+            titleLabel.numberOfLines = titleNumberOfLines
         }
     }
     
@@ -180,17 +197,6 @@ class Card11: CardView {
         }
     }
     
-    // MARK: - Init
-    init(callback: Card11Protocol) {
-        super.init(frame: .zero)
-        
-        self.callback = callback
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     // MARK: - Override
     override var nibName: String? {
         get {
@@ -204,6 +210,7 @@ class Card11: CardView {
         subtitleLabel.text = subtitleText
         subtitleLabel.textColor = subtitleColor
         subtitleLabel.font = subtitleFont
+        subtitleLabel.numberOfLines = subtitleNumberOfLines
         
         imageView.image = image
         imageView.backgroundColor = imageBackgroundColor
@@ -212,6 +219,7 @@ class Card11: CardView {
         titleLabel.text = titleText
         titleLabel.font = titleFont
         titleLabel.textColor = titleColor
+        titleLabel.numberOfLines = titleNumberOfLines
         
         bodyLabel.numberOfLines = bodyNumberOfLines
         bodyLabel.font = bodyFont
@@ -227,11 +235,34 @@ class Card11: CardView {
         clickableImageView.addGestureRecognizer(gestureRecognizer)
         clickableImageView.isUserInteractionEnabled = true
         
-        leftButton.setTitle(leftButtonTitle, for: .normal)
+        setLeftButtonTitle()
         leftButton.addTarget(self, action: #selector(onLeftButtonClick), for: .touchUpInside)
         
-        rightButton.setTitle(leftButtonTitle, for: .normal)
+        setRightButtonTitle()
         rightButton.addTarget(self, action: #selector(onRightButtonClick), for: .touchUpInside)
+        
+    }
+    
+    // MARK: - Private
+    private var leftButtonConstraints = [NSLayoutConstraint]()
+    private var rightButtonConstraints = [NSLayoutConstraint]()
+    
+    private func setLeftButtonTitle() {
+        NSLayoutConstraint.deactivate(leftButtonConstraints)
+        
+        leftButton.setTitle(leftButtonTitle, for: .normal)
+        leftButtonConstraints = [leftButton.widthAnchor.constraint(equalToConstant: leftButton.intrinsicContentSize.width + 16)]
+        
+        NSLayoutConstraint.activate(leftButtonConstraints)
+    }
+    
+    private func setRightButtonTitle() {
+        NSLayoutConstraint.deactivate(rightButtonConstraints)
+        
+        rightButton.setTitle(rightButtonTitle, for: .normal)
+        rightButtonConstraints = [rightButton.widthAnchor.constraint(equalToConstant: rightButton.intrinsicContentSize.width + 16)]
+        
+        NSLayoutConstraint.activate(rightButtonConstraints)
     }
 }
 

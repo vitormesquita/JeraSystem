@@ -44,7 +44,10 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8B-fH-Znw" customClass="FlatButton" customModule="LearningSwift" customModuleProvider="target">
-                    <rect key="frame" x="56" y="291" width="201" height="30"/>
+                    <rect key="frame" x="56" y="288" width="201" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="xL1-bW-5Ye"/>
+                    </constraints>
                     <state key="normal" title="Button"/>
                 </button>
             </subviews>
