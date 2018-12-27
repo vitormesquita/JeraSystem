@@ -12,34 +12,33 @@
 		571DAC7321BE9C9F00BC8E2E /* FlatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DAC6E21BE9C9F00BC8E2E /* FlatButton.swift */; };
 		571DAC7621BE9C9F00BC8E2E /* DottedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DAC7121BE9C9F00BC8E2E /* DottedButton.swift */; };
 		571DAC7721BE9C9F00BC8E2E /* GhostButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571DAC7221BE9C9F00BC8E2E /* GhostButton.swift */; };
-		57FD66A521D3F6D100375086 /* CardWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD667C21D3F6D100375086 /* CardWithTitle.swift */; };
-		57FD66A621D3F6D100375086 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD667D21D3F6D100375086 /* CardView.swift */; };
-		57FD66A721D3F6D100375086 /* Card7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FD667F21D3F6D100375086 /* Card7.xib */; };
-		57FD66A821D3F6D100375086 /* Card7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD668021D3F6D100375086 /* Card7.swift */; };
-		57FD66A921D3F6D100375086 /* Card9.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FD668221D3F6D100375086 /* Card9.xib */; };
-		57FD66AA21D3F6D100375086 /* Card9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD668321D3F6D100375086 /* Card9.swift */; };
-		57FD66AB21D3F6D100375086 /* Card8.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FD668521D3F6D100375086 /* Card8.xib */; };
-		57FD66AC21D3F6D100375086 /* Card8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD668621D3F6D100375086 /* Card8.swift */; };
-		57FD66AD21D3F6D100375086 /* Card6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD668821D3F6D100375086 /* Card6.swift */; };
-		57FD66AE21D3F6D100375086 /* Card6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FD668921D3F6D100375086 /* Card6.xib */; };
-		57FD66AF21D3F6D100375086 /* Card11.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FD668B21D3F6D100375086 /* Card11.xib */; };
-		57FD66B021D3F6D100375086 /* Card11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD668C21D3F6D100375086 /* Card11.swift */; };
-		57FD66B121D3F6D100375086 /* Card10.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FD668E21D3F6D100375086 /* Card10.xib */; };
-		57FD66B221D3F6D100375086 /* Card10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD668F21D3F6D100375086 /* Card10.swift */; };
-		57FD66B321D3F6D100375086 /* Card4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD669121D3F6D100375086 /* Card4.swift */; };
-		57FD66B421D3F6D100375086 /* Card4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FD669221D3F6D100375086 /* Card4.xib */; };
-		57FD66B521D3F6D100375086 /* Card3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD669421D3F6D100375086 /* Card3.swift */; };
-		57FD66B621D3F6D100375086 /* Card3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FD669521D3F6D100375086 /* Card3.xib */; };
-		57FD66B721D3F6D100375086 /* Card2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD669721D3F6D100375086 /* Card2.swift */; };
-		57FD66B821D3F6D100375086 /* Card2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FD669821D3F6D100375086 /* Card2.xib */; };
-		57FD66B921D3F6D100375086 /* Card5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD669A21D3F6D100375086 /* Card5.swift */; };
-		57FD66BA21D3F6D100375086 /* Card5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FD669B21D3F6D100375086 /* Card5.xib */; };
-		57FD66BB21D3F6D100375086 /* Card12.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FD669D21D3F6D100375086 /* Card12.xib */; };
-		57FD66BC21D3F6D100375086 /* Card12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD669E21D3F6D100375086 /* Card12.swift */; };
-		57FD66BD21D3F6D100375086 /* SimpleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD66A021D3F6D100375086 /* SimpleCard.swift */; };
-		57FD66BE21D3F6D100375086 /* SimpleCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FD66A121D3F6D100375086 /* SimpleCard.xib */; };
-		57FD66BF21D3F6D100375086 /* Card13.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57FD66A321D3F6D100375086 /* Card13.xib */; };
-		57FD66C021D3F6D100375086 /* Card13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD66A421D3F6D100375086 /* Card13.swift */; };
+		57E5AB5721D4FED9009CFD55 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5AB2F21D4FED8009CFD55 /* CardView.swift */; };
+		57E5AB5821D4FED9009CFD55 /* Card13.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E5AB3121D4FED8009CFD55 /* Card13.xib */; };
+		57E5AB5921D4FED9009CFD55 /* Card13.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5AB3221D4FED8009CFD55 /* Card13.swift */; };
+		57E5AB5A21D4FED9009CFD55 /* Card8.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E5AB3421D4FED8009CFD55 /* Card8.xib */; };
+		57E5AB5B21D4FED9009CFD55 /* Card8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5AB3521D4FED8009CFD55 /* Card8.swift */; };
+		57E5AB5C21D4FED9009CFD55 /* Card7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E5AB3721D4FED8009CFD55 /* Card7.xib */; };
+		57E5AB5D21D4FED9009CFD55 /* Card7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5AB3821D4FED8009CFD55 /* Card7.swift */; };
+		57E5AB5E21D4FED9009CFD55 /* Card4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5AB3A21D4FED8009CFD55 /* Card4.swift */; };
+		57E5AB5F21D4FED9009CFD55 /* Card4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E5AB3B21D4FED8009CFD55 /* Card4.xib */; };
+		57E5AB6021D4FED9009CFD55 /* Card1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E5AB3D21D4FED8009CFD55 /* Card1.xib */; };
+		57E5AB6121D4FED9009CFD55 /* Card1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5AB3E21D4FED8009CFD55 /* Card1.swift */; };
+		57E5AB6221D4FED9009CFD55 /* Card10.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E5AB4021D4FED9009CFD55 /* Card10.xib */; };
+		57E5AB6321D4FED9009CFD55 /* Card10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5AB4121D4FED9009CFD55 /* Card10.swift */; };
+		57E5AB6421D4FED9009CFD55 /* Card11.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E5AB4321D4FED9009CFD55 /* Card11.xib */; };
+		57E5AB6521D4FED9009CFD55 /* Card11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5AB4421D4FED9009CFD55 /* Card11.swift */; };
+		57E5AB6621D4FED9009CFD55 /* Card3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5AB4621D4FED9009CFD55 /* Card3.swift */; };
+		57E5AB6721D4FED9009CFD55 /* Card3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E5AB4721D4FED9009CFD55 /* Card3.xib */; };
+		57E5AB6821D4FED9009CFD55 /* Card2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5AB4921D4FED9009CFD55 /* Card2.swift */; };
+		57E5AB6921D4FED9009CFD55 /* Card2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E5AB4A21D4FED9009CFD55 /* Card2.xib */; };
+		57E5AB6A21D4FED9009CFD55 /* Card9.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E5AB4C21D4FED9009CFD55 /* Card9.xib */; };
+		57E5AB6B21D4FED9009CFD55 /* Card9.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5AB4D21D4FED9009CFD55 /* Card9.swift */; };
+		57E5AB6C21D4FED9009CFD55 /* Card12.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E5AB4F21D4FED9009CFD55 /* Card12.xib */; };
+		57E5AB6D21D4FED9009CFD55 /* Card12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5AB5021D4FED9009CFD55 /* Card12.swift */; };
+		57E5AB6E21D4FED9009CFD55 /* Card5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5AB5221D4FED9009CFD55 /* Card5.swift */; };
+		57E5AB6F21D4FED9009CFD55 /* Card5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E5AB5321D4FED9009CFD55 /* Card5.xib */; };
+		57E5AB7021D4FED9009CFD55 /* Card6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E5AB5521D4FED9009CFD55 /* Card6.swift */; };
+		57E5AB7121D4FED9009CFD55 /* Card6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57E5AB5621D4FED9009CFD55 /* Card6.xib */; };
 		FC78E47C21BEE44D00BC5DC0 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC78E47B21BEE44D00BC5DC0 /* Button.swift */; };
 		FCA247F721B6FB4900301E15 /* JeraSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = FCA247F521B6FB4900301E15 /* JeraSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FCA2480121B7009F00301E15 /* logo-jera.png in Resources */ = {isa = PBXBuildFile; fileRef = FCA2480021B7009F00301E15 /* logo-jera.png */; };
@@ -55,34 +54,33 @@
 		571DAC6E21BE9C9F00BC8E2E /* FlatButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatButton.swift; sourceTree = "<group>"; };
 		571DAC7121BE9C9F00BC8E2E /* DottedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DottedButton.swift; sourceTree = "<group>"; };
 		571DAC7221BE9C9F00BC8E2E /* GhostButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GhostButton.swift; sourceTree = "<group>"; };
-		57FD667C21D3F6D100375086 /* CardWithTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardWithTitle.swift; sourceTree = "<group>"; };
-		57FD667D21D3F6D100375086 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		57FD667F21D3F6D100375086 /* Card7.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card7.xib; sourceTree = "<group>"; };
-		57FD668021D3F6D100375086 /* Card7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card7.swift; sourceTree = "<group>"; };
-		57FD668221D3F6D100375086 /* Card9.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card9.xib; sourceTree = "<group>"; };
-		57FD668321D3F6D100375086 /* Card9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card9.swift; sourceTree = "<group>"; };
-		57FD668521D3F6D100375086 /* Card8.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card8.xib; sourceTree = "<group>"; };
-		57FD668621D3F6D100375086 /* Card8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card8.swift; sourceTree = "<group>"; };
-		57FD668821D3F6D100375086 /* Card6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card6.swift; sourceTree = "<group>"; };
-		57FD668921D3F6D100375086 /* Card6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card6.xib; sourceTree = "<group>"; };
-		57FD668B21D3F6D100375086 /* Card11.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card11.xib; sourceTree = "<group>"; };
-		57FD668C21D3F6D100375086 /* Card11.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card11.swift; sourceTree = "<group>"; };
-		57FD668E21D3F6D100375086 /* Card10.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card10.xib; sourceTree = "<group>"; };
-		57FD668F21D3F6D100375086 /* Card10.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card10.swift; sourceTree = "<group>"; };
-		57FD669121D3F6D100375086 /* Card4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card4.swift; sourceTree = "<group>"; };
-		57FD669221D3F6D100375086 /* Card4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card4.xib; sourceTree = "<group>"; };
-		57FD669421D3F6D100375086 /* Card3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card3.swift; sourceTree = "<group>"; };
-		57FD669521D3F6D100375086 /* Card3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card3.xib; sourceTree = "<group>"; };
-		57FD669721D3F6D100375086 /* Card2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card2.swift; sourceTree = "<group>"; };
-		57FD669821D3F6D100375086 /* Card2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card2.xib; sourceTree = "<group>"; };
-		57FD669A21D3F6D100375086 /* Card5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card5.swift; sourceTree = "<group>"; };
-		57FD669B21D3F6D100375086 /* Card5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card5.xib; sourceTree = "<group>"; };
-		57FD669D21D3F6D100375086 /* Card12.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card12.xib; sourceTree = "<group>"; };
-		57FD669E21D3F6D100375086 /* Card12.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card12.swift; sourceTree = "<group>"; };
-		57FD66A021D3F6D100375086 /* SimpleCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleCard.swift; sourceTree = "<group>"; };
-		57FD66A121D3F6D100375086 /* SimpleCard.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleCard.xib; sourceTree = "<group>"; };
-		57FD66A321D3F6D100375086 /* Card13.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card13.xib; sourceTree = "<group>"; };
-		57FD66A421D3F6D100375086 /* Card13.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card13.swift; sourceTree = "<group>"; };
+		57E5AB2F21D4FED8009CFD55 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		57E5AB3121D4FED8009CFD55 /* Card13.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card13.xib; sourceTree = "<group>"; };
+		57E5AB3221D4FED8009CFD55 /* Card13.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card13.swift; sourceTree = "<group>"; };
+		57E5AB3421D4FED8009CFD55 /* Card8.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card8.xib; sourceTree = "<group>"; };
+		57E5AB3521D4FED8009CFD55 /* Card8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card8.swift; sourceTree = "<group>"; };
+		57E5AB3721D4FED8009CFD55 /* Card7.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card7.xib; sourceTree = "<group>"; };
+		57E5AB3821D4FED8009CFD55 /* Card7.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card7.swift; sourceTree = "<group>"; };
+		57E5AB3A21D4FED8009CFD55 /* Card4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card4.swift; sourceTree = "<group>"; };
+		57E5AB3B21D4FED8009CFD55 /* Card4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card4.xib; sourceTree = "<group>"; };
+		57E5AB3D21D4FED8009CFD55 /* Card1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card1.xib; sourceTree = "<group>"; };
+		57E5AB3E21D4FED8009CFD55 /* Card1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card1.swift; sourceTree = "<group>"; };
+		57E5AB4021D4FED9009CFD55 /* Card10.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card10.xib; sourceTree = "<group>"; };
+		57E5AB4121D4FED9009CFD55 /* Card10.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card10.swift; sourceTree = "<group>"; };
+		57E5AB4321D4FED9009CFD55 /* Card11.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card11.xib; sourceTree = "<group>"; };
+		57E5AB4421D4FED9009CFD55 /* Card11.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card11.swift; sourceTree = "<group>"; };
+		57E5AB4621D4FED9009CFD55 /* Card3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card3.swift; sourceTree = "<group>"; };
+		57E5AB4721D4FED9009CFD55 /* Card3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card3.xib; sourceTree = "<group>"; };
+		57E5AB4921D4FED9009CFD55 /* Card2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card2.swift; sourceTree = "<group>"; };
+		57E5AB4A21D4FED9009CFD55 /* Card2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card2.xib; sourceTree = "<group>"; };
+		57E5AB4C21D4FED9009CFD55 /* Card9.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card9.xib; sourceTree = "<group>"; };
+		57E5AB4D21D4FED9009CFD55 /* Card9.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card9.swift; sourceTree = "<group>"; };
+		57E5AB4F21D4FED9009CFD55 /* Card12.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card12.xib; sourceTree = "<group>"; };
+		57E5AB5021D4FED9009CFD55 /* Card12.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card12.swift; sourceTree = "<group>"; };
+		57E5AB5221D4FED9009CFD55 /* Card5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card5.swift; sourceTree = "<group>"; };
+		57E5AB5321D4FED9009CFD55 /* Card5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card5.xib; sourceTree = "<group>"; };
+		57E5AB5521D4FED9009CFD55 /* Card6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card6.swift; sourceTree = "<group>"; };
+		57E5AB5621D4FED9009CFD55 /* Card6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card6.xib; sourceTree = "<group>"; };
 		FC78E47B21BEE44D00BC5DC0 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		FCA247F221B6FB4900301E15 /* JeraSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JeraSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA247F521B6FB4900301E15 /* JeraSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JeraSystem.h; sourceTree = "<group>"; };
@@ -105,143 +103,142 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		57FD667B21D3F6D100375086 /* cards */ = {
+		57E5AB3021D4FED8009CFD55 /* card13 */ = {
 			isa = PBXGroup;
 			children = (
-				57FD667C21D3F6D100375086 /* CardWithTitle.swift */,
-				57FD667D21D3F6D100375086 /* CardView.swift */,
-				57FD667E21D3F6D100375086 /* card7 */,
-				57FD668121D3F6D100375086 /* card9 */,
-				57FD668421D3F6D100375086 /* card8 */,
-				57FD668721D3F6D100375086 /* card6 */,
-				57FD668A21D3F6D100375086 /* card11 */,
-				57FD668D21D3F6D100375086 /* card10 */,
-				57FD669021D3F6D100375086 /* card4 */,
-				57FD669321D3F6D100375086 /* card3 */,
-				57FD669621D3F6D100375086 /* card2 */,
-				57FD669921D3F6D100375086 /* card5 */,
-				57FD669C21D3F6D100375086 /* card12 */,
-				57FD669F21D3F6D100375086 /* simpleCard */,
-				57FD66A221D3F6D100375086 /* card13 */,
+				57E5AB3121D4FED8009CFD55 /* Card13.xib */,
+				57E5AB3221D4FED8009CFD55 /* Card13.swift */,
 			);
-			path = cards;
+			path = card13;
 			sourceTree = "<group>";
 		};
-		57FD667E21D3F6D100375086 /* card7 */ = {
+		57E5AB3321D4FED8009CFD55 /* card8 */ = {
 			isa = PBXGroup;
 			children = (
-				57FD667F21D3F6D100375086 /* Card7.xib */,
-				57FD668021D3F6D100375086 /* Card7.swift */,
-			);
-			path = card7;
-			sourceTree = "<group>";
-		};
-		57FD668121D3F6D100375086 /* card9 */ = {
-			isa = PBXGroup;
-			children = (
-				57FD668221D3F6D100375086 /* Card9.xib */,
-				57FD668321D3F6D100375086 /* Card9.swift */,
-			);
-			path = card9;
-			sourceTree = "<group>";
-		};
-		57FD668421D3F6D100375086 /* card8 */ = {
-			isa = PBXGroup;
-			children = (
-				57FD668521D3F6D100375086 /* Card8.xib */,
-				57FD668621D3F6D100375086 /* Card8.swift */,
+				57E5AB3421D4FED8009CFD55 /* Card8.xib */,
+				57E5AB3521D4FED8009CFD55 /* Card8.swift */,
 			);
 			path = card8;
 			sourceTree = "<group>";
 		};
-		57FD668721D3F6D100375086 /* card6 */ = {
+		57E5AB3621D4FED8009CFD55 /* card7 */ = {
 			isa = PBXGroup;
 			children = (
-				57FD668821D3F6D100375086 /* Card6.swift */,
-				57FD668921D3F6D100375086 /* Card6.xib */,
+				57E5AB3721D4FED8009CFD55 /* Card7.xib */,
+				57E5AB3821D4FED8009CFD55 /* Card7.swift */,
 			);
-			path = card6;
+			path = card7;
 			sourceTree = "<group>";
 		};
-		57FD668A21D3F6D100375086 /* card11 */ = {
+		57E5AB3921D4FED8009CFD55 /* card4 */ = {
 			isa = PBXGroup;
 			children = (
-				57FD668B21D3F6D100375086 /* Card11.xib */,
-				57FD668C21D3F6D100375086 /* Card11.swift */,
-			);
-			path = card11;
-			sourceTree = "<group>";
-		};
-		57FD668D21D3F6D100375086 /* card10 */ = {
-			isa = PBXGroup;
-			children = (
-				57FD668E21D3F6D100375086 /* Card10.xib */,
-				57FD668F21D3F6D100375086 /* Card10.swift */,
-			);
-			path = card10;
-			sourceTree = "<group>";
-		};
-		57FD669021D3F6D100375086 /* card4 */ = {
-			isa = PBXGroup;
-			children = (
-				57FD669121D3F6D100375086 /* Card4.swift */,
-				57FD669221D3F6D100375086 /* Card4.xib */,
+				57E5AB3A21D4FED8009CFD55 /* Card4.swift */,
+				57E5AB3B21D4FED8009CFD55 /* Card4.xib */,
 			);
 			path = card4;
 			sourceTree = "<group>";
 		};
-		57FD669321D3F6D100375086 /* card3 */ = {
+		57E5AB3C21D4FED8009CFD55 /* Card1 */ = {
 			isa = PBXGroup;
 			children = (
-				57FD669421D3F6D100375086 /* Card3.swift */,
-				57FD669521D3F6D100375086 /* Card3.xib */,
+				57E5AB3D21D4FED8009CFD55 /* Card1.xib */,
+				57E5AB3E21D4FED8009CFD55 /* Card1.swift */,
+			);
+			path = Card1;
+			sourceTree = "<group>";
+		};
+		57E5AB3F21D4FED9009CFD55 /* card10 */ = {
+			isa = PBXGroup;
+			children = (
+				57E5AB4021D4FED9009CFD55 /* Card10.xib */,
+				57E5AB4121D4FED9009CFD55 /* Card10.swift */,
+			);
+			path = card10;
+			sourceTree = "<group>";
+		};
+		57E5AB4221D4FED9009CFD55 /* card11 */ = {
+			isa = PBXGroup;
+			children = (
+				57E5AB4321D4FED9009CFD55 /* Card11.xib */,
+				57E5AB4421D4FED9009CFD55 /* Card11.swift */,
+			);
+			path = card11;
+			sourceTree = "<group>";
+		};
+		57E5AB4521D4FED9009CFD55 /* card3 */ = {
+			isa = PBXGroup;
+			children = (
+				57E5AB4621D4FED9009CFD55 /* Card3.swift */,
+				57E5AB4721D4FED9009CFD55 /* Card3.xib */,
 			);
 			path = card3;
 			sourceTree = "<group>";
 		};
-		57FD669621D3F6D100375086 /* card2 */ = {
+		57E5AB4821D4FED9009CFD55 /* card2 */ = {
 			isa = PBXGroup;
 			children = (
-				57FD669721D3F6D100375086 /* Card2.swift */,
-				57FD669821D3F6D100375086 /* Card2.xib */,
+				57E5AB4921D4FED9009CFD55 /* Card2.swift */,
+				57E5AB4A21D4FED9009CFD55 /* Card2.xib */,
 			);
 			path = card2;
 			sourceTree = "<group>";
 		};
-		57FD669921D3F6D100375086 /* card5 */ = {
+		57E5AB4B21D4FED9009CFD55 /* card9 */ = {
 			isa = PBXGroup;
 			children = (
-				57FD669A21D3F6D100375086 /* Card5.swift */,
-				57FD669B21D3F6D100375086 /* Card5.xib */,
+				57E5AB4C21D4FED9009CFD55 /* Card9.xib */,
+				57E5AB4D21D4FED9009CFD55 /* Card9.swift */,
 			);
-			path = card5;
+			path = card9;
 			sourceTree = "<group>";
 		};
-		57FD669C21D3F6D100375086 /* card12 */ = {
+		57E5AB4E21D4FED9009CFD55 /* card12 */ = {
 			isa = PBXGroup;
 			children = (
-				57FD669D21D3F6D100375086 /* Card12.xib */,
-				57FD669E21D3F6D100375086 /* Card12.swift */,
+				57E5AB4F21D4FED9009CFD55 /* Card12.xib */,
+				57E5AB5021D4FED9009CFD55 /* Card12.swift */,
 			);
 			path = card12;
 			sourceTree = "<group>";
 		};
-		57FD669F21D3F6D100375086 /* simpleCard */ = {
+		57E5AB5121D4FED9009CFD55 /* card5 */ = {
 			isa = PBXGroup;
 			children = (
-				57FD66A021D3F6D100375086 /* SimpleCard.swift */,
-				57FD66A121D3F6D100375086 /* SimpleCard.xib */,
+				57E5AB5221D4FED9009CFD55 /* Card5.swift */,
+				57E5AB5321D4FED9009CFD55 /* Card5.xib */,
 			);
-			path = simpleCard;
+			path = card5;
 			sourceTree = "<group>";
 		};
-		57FD66A221D3F6D100375086 /* card13 */ = {
+		57E5AB5421D4FED9009CFD55 /* card6 */ = {
 			isa = PBXGroup;
 			children = (
-				57FD66A321D3F6D100375086 /* Card13.xib */,
-				57FD66A421D3F6D100375086 /* Card13.swift */,
+				57E5AB5521D4FED9009CFD55 /* Card6.swift */,
+				57E5AB5621D4FED9009CFD55 /* Card6.xib */,
 			);
-			path = card13;
+			path = card6;
+			sourceTree = "<group>";
+		};
+		57FD667B21D3F6D100375086 /* cards */ = {
+			isa = PBXGroup;
+			children = (
+				57E5AB2F21D4FED8009CFD55 /* CardView.swift */,
+				57E5AB3C21D4FED8009CFD55 /* Card1 */,
+				57E5AB4821D4FED9009CFD55 /* card2 */,
+				57E5AB4521D4FED9009CFD55 /* card3 */,
+				57E5AB3921D4FED8009CFD55 /* card4 */,
+				57E5AB5121D4FED9009CFD55 /* card5 */,
+				57E5AB5421D4FED9009CFD55 /* card6 */,
+				57E5AB3621D4FED8009CFD55 /* card7 */,
+				57E5AB3321D4FED8009CFD55 /* card8 */,
+				57E5AB4B21D4FED9009CFD55 /* card9 */,
+				57E5AB3F21D4FED9009CFD55 /* card10 */,
+				57E5AB4221D4FED9009CFD55 /* card11 */,
+				57E5AB4E21D4FED9009CFD55 /* card12 */,
+				57E5AB3021D4FED8009CFD55 /* card13 */,
+			);
+			path = cards;
 			sourceTree = "<group>";
 		};
 		FCA247E821B6FB4900301E15 = {
@@ -390,20 +387,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57FD66B421D3F6D100375086 /* Card4.xib in Resources */,
-				57FD66AB21D3F6D100375086 /* Card8.xib in Resources */,
-				57FD66AE21D3F6D100375086 /* Card6.xib in Resources */,
+				57E5AB5F21D4FED9009CFD55 /* Card4.xib in Resources */,
 				FCA2480121B7009F00301E15 /* logo-jera.png in Resources */,
-				57FD66B821D3F6D100375086 /* Card2.xib in Resources */,
-				57FD66B121D3F6D100375086 /* Card10.xib in Resources */,
-				57FD66B621D3F6D100375086 /* Card3.xib in Resources */,
-				57FD66BF21D3F6D100375086 /* Card13.xib in Resources */,
-				57FD66BA21D3F6D100375086 /* Card5.xib in Resources */,
-				57FD66BB21D3F6D100375086 /* Card12.xib in Resources */,
-				57FD66BE21D3F6D100375086 /* SimpleCard.xib in Resources */,
-				57FD66AF21D3F6D100375086 /* Card11.xib in Resources */,
-				57FD66A721D3F6D100375086 /* Card7.xib in Resources */,
-				57FD66A921D3F6D100375086 /* Card9.xib in Resources */,
+				57E5AB5821D4FED9009CFD55 /* Card13.xib in Resources */,
+				57E5AB6A21D4FED9009CFD55 /* Card9.xib in Resources */,
+				57E5AB6221D4FED9009CFD55 /* Card10.xib in Resources */,
+				57E5AB6921D4FED9009CFD55 /* Card2.xib in Resources */,
+				57E5AB5A21D4FED9009CFD55 /* Card8.xib in Resources */,
+				57E5AB6721D4FED9009CFD55 /* Card3.xib in Resources */,
+				57E5AB6F21D4FED9009CFD55 /* Card5.xib in Resources */,
+				57E5AB6C21D4FED9009CFD55 /* Card12.xib in Resources */,
+				57E5AB5C21D4FED9009CFD55 /* Card7.xib in Resources */,
+				57E5AB6021D4FED9009CFD55 /* Card1.xib in Resources */,
+				57E5AB7121D4FED9009CFD55 /* Card6.xib in Resources */,
+				57E5AB6421D4FED9009CFD55 /* Card11.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,31 +411,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57E5AB5B21D4FED9009CFD55 /* Card8.swift in Sources */,
+				57E5AB6121D4FED9009CFD55 /* Card1.swift in Sources */,
+				57E5AB6821D4FED9009CFD55 /* Card2.swift in Sources */,
 				FCA2480F21B71ECA00301E15 /* Shadow.swift in Sources */,
-				57FD66B321D3F6D100375086 /* Card4.swift in Sources */,
+				57E5AB5921D4FED9009CFD55 /* Card13.swift in Sources */,
 				571DAC7721BE9C9F00BC8E2E /* GhostButton.swift in Sources */,
-				57FD66B521D3F6D100375086 /* Card3.swift in Sources */,
 				5707462621BEE6CC005A925C /* Corner.swift in Sources */,
 				FCF2F41B21BFE01D008748F3 /* RaisedButton.swift in Sources */,
+				57E5AB6521D4FED9009CFD55 /* Card11.swift in Sources */,
 				571DAC7321BE9C9F00BC8E2E /* FlatButton.swift in Sources */,
-				57FD66A821D3F6D100375086 /* Card7.swift in Sources */,
-				57FD66BC21D3F6D100375086 /* Card12.swift in Sources */,
-				57FD66AD21D3F6D100375086 /* Card6.swift in Sources */,
-				57FD66A521D3F6D100375086 /* CardWithTitle.swift in Sources */,
-				57FD66AC21D3F6D100375086 /* Card8.swift in Sources */,
-				57FD66B721D3F6D100375086 /* Card2.swift in Sources */,
 				FCF2F41921BF0049008748F3 /* Pulse.swift in Sources */,
+				57E5AB6E21D4FED9009CFD55 /* Card5.swift in Sources */,
 				FC78E47C21BEE44D00BC5DC0 /* Button.swift in Sources */,
-				57FD66BD21D3F6D100375086 /* SimpleCard.swift in Sources */,
-				57FD66AA21D3F6D100375086 /* Card9.swift in Sources */,
-				57FD66B021D3F6D100375086 /* Card11.swift in Sources */,
 				571DAC7621BE9C9F00BC8E2E /* DottedButton.swift in Sources */,
-				57FD66C021D3F6D100375086 /* Card13.swift in Sources */,
+				57E5AB7021D4FED9009CFD55 /* Card6.swift in Sources */,
 				FCA2480D21B71D5400301E15 /* Theme.swift in Sources */,
-				57FD66A621D3F6D100375086 /* CardView.swift in Sources */,
-				57FD66B921D3F6D100375086 /* Card5.swift in Sources */,
-				57FD66B221D3F6D100375086 /* Card10.swift in Sources */,
+				57E5AB6321D4FED9009CFD55 /* Card10.swift in Sources */,
+				57E5AB5721D4FED9009CFD55 /* CardView.swift in Sources */,
+				57E5AB6B21D4FED9009CFD55 /* Card9.swift in Sources */,
+				57E5AB6621D4FED9009CFD55 /* Card3.swift in Sources */,
+				57E5AB6D21D4FED9009CFD55 /* Card12.swift in Sources */,
 				571246DF21BAA0BD00C932DA /* Font.swift in Sources */,
+				57E5AB5D21D4FED9009CFD55 /* Card7.swift in Sources */,
+				57E5AB5E21D4FED9009CFD55 /* Card4.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

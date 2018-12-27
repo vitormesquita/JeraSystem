@@ -8,15 +8,21 @@
 
 import UIKit
 
+// MARK: - Delegate
+protocol Card5Delegate: class {
+    func onButtonClick()
+    func onImageClick()
+}
+
 /**
  A card with image, body, clickable image and button.
- Needs a callback implementation.
+ Needs a delegate implementation.
  */
 @IBDesignable
 class Card5: CardView {
     
-    // MARK: - Callback
-    open var callback: Card5Protocol?
+    // MARK: - Delegate
+    open weak var delegate: Card5Delegate?
     
     // MARK: - Outlet
     @IBOutlet weak var imageView: UIImageView!
@@ -29,9 +35,7 @@ class Card5: CardView {
     /// The view's background color.
     @IBInspectable
     open var imageBackgroundColor: UIColor = ThemeManager.shared.color.gray4 {
-        didSet {
-            imageView.backgroundColor = imageBackgroundColor
-        }
+        didSet { imageView.backgroundColor = imageBackgroundColor }
     }
     
     /// The image height.
@@ -45,72 +49,57 @@ class Card5: CardView {
     
     ///The image displayed in image view.
     @IBInspectable
-    open var image: UIImage = UIImage() {
-        didSet {
-            imageView.image = image
-        }
+    open var image: UIImage? {
+        get { return imageView.image }
+        set { imageView.image = newValue }
     }
     
     /// The view's background color.
     @IBInspectable
     open var clickableImageBackgroundColor: UIColor = ThemeManager.shared.color.gray4 {
-        didSet {
-            clickableImageView.backgroundColor = clickableImageBackgroundColor
-        }
+        didSet { clickableImageView.backgroundColor = clickableImageBackgroundColor }
     }
     
     ///The image displayed in image view.
     @IBInspectable
-    open var clickableImage: UIImage = UIImage() {
-        didSet {
-            clickableImageView.image = clickableImage
-        }
+    open var clickableImage: UIImage? {
+        didSet { clickableImageView.image = clickableImage }
     }
     
     @IBInspectable
-    open var buttonTitle: String = "Button" {
-        didSet {
-            button.setTitle(buttonTitle, for: .normal)
-        }
+    open var buttonTitle: String? {
+        get { return button.title(for: .normal) }
+        set { button.setTitle(newValue, for: .normal) }
     }
     
     /// The maximum number of lines to use for rendering text.
     @IBInspectable
     open var bodyNumberOfLines: Int = 1 {
-        didSet {
-            bodyLabel.numberOfLines = bodyNumberOfLines
-        }
+        didSet { bodyLabel.numberOfLines = bodyNumberOfLines }
     }
     
     /// The current text that is displayed by the label
     @IBInspectable
-    open var bodyText: String = "Card 5 Body" {
-        didSet {
-            bodyLabel.text = bodyText
-        }
+    open var bodyText: String? {
+        get { return bodyLabel.text }
+        set { bodyLabel.text = newValue }
     }
     
     /// The font used to display the text.
     @IBInspectable
     open var bodyFont: UIFont = ThemeManager.shared.font.body2 {
-        didSet {
-            bodyLabel.font = bodyFont
-        }
+        didSet { bodyLabel.font = bodyFont }
     }
     
     /// The color of the text.
     @IBInspectable
     open var bodyColor: UIColor = ThemeManager.shared.color.primary {
-        didSet {
-            bodyLabel.textColor = bodyColor
-        }
+        didSet { bodyLabel.textColor = bodyColor }
     }
     
     //MARK: - Override
     override var nibName: String? {
-        get {
-            return "Card5"
-        }
+        return "Card5"
     }
     
     override internal func prepare() {
@@ -135,21 +124,14 @@ class Card5: CardView {
     }
 }
 
-// MARK: - Protocol
-protocol Card5Protocol {
-    func onButtonClick()
-    func onImageClick()
-}
-
 // MARK: - objc func
 extension Card5 {
+    
     @objc func onButtonClick() {
-        guard let callback = callback else { return }
-        callback.onButtonClick()
+        delegate?.onButtonClick()
     }
     
     @objc func onImageClick() {
-        guard let callback = callback else { return }
-        callback.onImageClick()
+        delegate?.onImageClick()
     }
 }

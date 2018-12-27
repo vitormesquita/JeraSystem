@@ -8,15 +8,20 @@
 
 import UIKit
 
+// MARK: - Delegate
+protocol Card8Delegate: class {
+    func onImageClick()
+}
+
 /**
  A card with overline, title, body, image and clickable image.
- Needs a callback implementation.
+ Needs a delegate implementation.
  */
 @IBDesignable
 class Card8: CardView {
     
-    // MARK: - Callback
-    open var callback: Card8Protocol?
+    // MARK: - Delegate
+    open weak var delegate: Card8Delegate?
     
     // MARK: - Outlet
     @IBOutlet weak var overlineLabel: UILabel!
@@ -28,121 +33,96 @@ class Card8: CardView {
     // MARK: - Inspectable
     /// The current text that is displayed by the label
     @IBInspectable
-    open var overlineText: String = "Card 8 Overline" {
-        didSet {
-            overlineLabel.text = overlineText
-        }
+    open var overlineText: String? {
+        get { return overlineLabel.text }
+        set { overlineLabel.text = newValue }
     }
     
     /// The font used to display the text.
     @IBInspectable
     open var overlineFont: UIFont = ThemeManager.shared.font.caption {
-        didSet {
-            overlineLabel.font = overlineFont
-        }
+        didSet { overlineLabel.font = overlineFont }
     }
     
     /// The color of the text.
     @IBInspectable
     open var overlineColor: UIColor = ThemeManager.shared.color.gray3 {
-        didSet {
-            overlineLabel.textColor = overlineColor
-        }
+        didSet { overlineLabel.textColor = overlineColor }
     }
     
     /// The view's background color.
     @IBInspectable
     open var imageBackgroundColor: UIColor = ThemeManager.shared.color.gray4 {
-        didSet {
-            imageView.backgroundColor = imageBackgroundColor
-        }
+        didSet { imageView.backgroundColor = imageBackgroundColor }
     }
     
     ///The image displayed in image view.
     @IBInspectable
-    open var image: UIImage = UIImage() {
-        didSet {
-            imageView.image = image
-        }
+    open var image: UIImage? {
+        get { return imageView.image }
+        set { imageView.image = newValue }
     }
     
     /// The maximum number of lines to use for rendering text.
     @IBInspectable
     open var bodyNumberOfLines: Int = 1 {
-        didSet {
-            bodyLabel.numberOfLines = bodyNumberOfLines
-        }
+        didSet { bodyLabel.numberOfLines = bodyNumberOfLines }
     }
     
     /// The current text that is displayed by the label
     @IBInspectable
-    open var titleText: String = "Card 8 Title" {
-        didSet {
-            titleLabel.text = titleText
-        }
+    open var titleText: String? {
+        get { return titleLabel.text }
+        set { titleLabel.text = newValue }
     }
     
     /// The font used to display the text.
     @IBInspectable
     open var titleFont: UIFont = ThemeManager.shared.font.headline5 {
-        didSet {
-            titleLabel.font = titleFont
-        }
+        didSet { titleLabel.font = titleFont }
     }
     
     /// The color of the text.
     @IBInspectable
     open var titleColor: UIColor = ThemeManager.shared.color.gray2 {
-        didSet {
-            titleLabel.textColor = titleColor
-        }
+        didSet { titleLabel.textColor = titleColor }
     }
     
     /// The current text that is displayed by the label
     @IBInspectable
-    open var bodyText: String = "Card 8 Body" {
-        didSet {
-            bodyLabel.text = bodyText
-        }
+    open var bodyText: String? {
+        get { return bodyLabel.text }
+        set { bodyLabel.text = newValue }
     }
     
     /// The font used to display the text.
     @IBInspectable
     open var bodyFont: UIFont = ThemeManager.shared.font.body2 {
-        didSet {
-            bodyLabel.font = bodyFont
-        }
+        didSet { bodyLabel.font = bodyFont }
     }
     
     /// The color of the text.
     @IBInspectable
     open var bodyColor: UIColor = ThemeManager.shared.color.gray3 {
-        didSet {
-            bodyLabel.textColor = bodyColor
-        }
+        didSet { bodyLabel.textColor = bodyColor }
     }
     
     /// The view's background color.
     @IBInspectable
     open var clickableImageBackgroundColor: UIColor = ThemeManager.shared.color.gray4 {
-        didSet {
-            clickableImageView.backgroundColor = clickableImageBackgroundColor
-        }
+        didSet { clickableImageView.backgroundColor = clickableImageBackgroundColor }
     }
     
     ///The image displayed in image view.
     @IBInspectable
-    open var clickableImage: UIImage = UIImage() {
-        didSet {
-            clickableImageView.image = clickableImage
-        }
+    open var clickableImage: UIImage? {
+        get { return clickableImageView.image }
+        set { clickableImageView.image = newValue }
     }
     
     // MARK: - Override
     override var nibName: String? {
-        get {
-            return "Card8"
-        }
+        return "Card8"
     }
     
     override internal func prepare() {
@@ -173,15 +153,10 @@ class Card8: CardView {
     }
 }
 
-// MARK: - Protocol
-protocol Card8Protocol {
-    func onImageClick()
-}
-
 // MARK: - objc func
 extension Card8 {
+    
     @objc func onImageClick() {
-        guard let callback = callback else { return }
-        callback.onImageClick()
+        delegate?.onImageClick()
     }
 }

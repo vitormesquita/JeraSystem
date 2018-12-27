@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SimpleCard" customModule="LearningSwift" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Card1" customModule="LearningSwift" customModuleProvider="target">
             <connections>
                 <outlet property="bodyLabel" destination="rQH-CK-uLN" id="gDM-RO-EB1"/>
                 <outlet property="titleLabel" destination="gxK-4M-a6m" id="kgU-8i-5Ym"/>

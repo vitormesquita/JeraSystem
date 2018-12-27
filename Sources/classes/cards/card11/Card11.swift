@@ -8,15 +8,22 @@
 
 import UIKit
 
+// MARK: - Delegate
+protocol Card11Delegate: class {
+    func onLeftButtonClick()
+    func onRightButtonClick()
+    func onImageClick()
+}
+
 /**
  A card with avatar, title, subtitle, clickable image, image, body and two buttons.
- Needs a callback implementation.
+ Needs a delegate implementation.
  */
 @IBDesignable
 class Card11: CardView {
     
-    // MARK: - Callback
-    open var callback: Card11Protocol?
+    // MARK: - Delegate
+    open weak var delegate: Card11Delegate?
     
     // MARK: - Outlet
     @IBOutlet weak var clickableImageView: UIImageView!
@@ -32,160 +39,128 @@ class Card11: CardView {
     // MARK: - Inspectable
     /// The current text that is displayed by the label
     @IBInspectable
-    open var subtitleText: String = "Card 11 subtitle" {
-        didSet {
-            subtitleLabel.text = subtitleText
-        }
+    open var subtitleText: String? {
+        get { return subtitleLabel.text }
+        set { subtitleLabel.text = newValue }
     }
     
     /// The font used to display the text.
     @IBInspectable
     open var subtitleFont: UIFont = ThemeManager.shared.font.caption {
-        didSet {
-            subtitleLabel.font = subtitleFont
-        }
+        didSet { subtitleLabel.font = subtitleFont }
     }
     
     /// The color of the text.
     @IBInspectable
     open var subtitleColor: UIColor = ThemeManager.shared.color.gray3 {
-        didSet {
-            subtitleLabel.textColor = subtitleColor
-        }
+        didSet { subtitleLabel.textColor = subtitleColor }
     }
     
     /// The maximum number of lines to use for rendering text.
     @IBInspectable
     open var subtitleNumberOfLines: Int = 1 {
-        didSet {
-            subtitleLabel.numberOfLines = subtitleNumberOfLines
-        }
+        didSet { subtitleLabel.numberOfLines = subtitleNumberOfLines }
     }
     
     /// The view's background color.
     @IBInspectable
     open var imageBackgroundColor: UIColor = ThemeManager.shared.color.gray4 {
-        didSet {
-            imageView.backgroundColor = imageBackgroundColor
-        }
+        didSet { imageView.backgroundColor = imageBackgroundColor }
     }
     
     ///The image displayed in image view.
     @IBInspectable
-    open var image: UIImage = UIImage() {
-        didSet {
-            imageView.image = image
-        }
+    open var image: UIImage? {
+        get { return imageView.image }
+        set { imageView.image = newValue }
     }
     
     @IBInspectable
-    open var leftButtonTitle: String = "Button" {
-        didSet {
-            setLeftButtonTitle()
-        }
+    open var leftButtonTitle: String? {
+        get { return leftButton.title(for: .normal) }
+        set { setLeftButtonTitle(newValue) }
     }
     
     @IBInspectable
-    open var rightButtonTitle: String = "Button" {
-        didSet {
-            setRightButtonTitle()
-        }
+    open var rightButtonTitle: String? {
+        get { return rightButton.title(for: .normal) }
+        set { setRightButtonTitle(newValue) }
     }
     
     /// The maximum number of lines to use for rendering text.
     @IBInspectable
     open var bodyNumberOfLines: Int = 1 {
-        didSet {
-            bodyLabel.numberOfLines = bodyNumberOfLines
-        }
+        didSet { bodyLabel.numberOfLines = bodyNumberOfLines }
     }
     
     /// The current text that is displayed by the label
     @IBInspectable
-    open var titleText: String = "Card 11 Title" {
-        didSet {
-            titleLabel.text = titleText
-        }
+    open var titleText: String? {
+        get { return titleLabel.text }
+        set { titleLabel.text = newValue }
     }
     
     /// The font used to display the text.
     @IBInspectable
     open var titleFont: UIFont = ThemeManager.shared.font.headline5 {
-        didSet {
-            titleLabel.font = titleFont
-        }
+        didSet { titleLabel.font = titleFont }
     }
     
     /// The color of the text.
     @IBInspectable
     open var titleColor: UIColor = ThemeManager.shared.color.gray2 {
-        didSet {
-            titleLabel.textColor = titleColor
-        }
+        didSet { titleLabel.textColor = titleColor }
     }
     
     /// The maximum number of lines to use for rendering text.
     @IBInspectable
     open var titleNumberOfLines: Int = 1 {
-        didSet {
-            titleLabel.numberOfLines = titleNumberOfLines
-        }
+        didSet { titleLabel.numberOfLines = titleNumberOfLines }
     }
     
     /// The current text that is displayed by the label
     @IBInspectable
-    open var bodyText: String = "Card 11 Body" {
-        didSet {
-            bodyLabel.text = bodyText
-        }
+    open var bodyText: String? {
+        get { return bodyLabel.text }
+        set { bodyLabel.text = newValue }
     }
     
     /// The font used to display the text.
     @IBInspectable
     open var bodyFont: UIFont = ThemeManager.shared.font.body2 {
-        didSet {
-            bodyLabel.font = bodyFont
-        }
+        didSet { bodyLabel.font = bodyFont }
     }
     
     /// The color of the text.
     @IBInspectable
     open var bodyColor: UIColor = ThemeManager.shared.color.gray3 {
-        didSet {
-            bodyLabel.textColor = bodyColor
-        }
+        didSet { bodyLabel.textColor = bodyColor }
     }
     
     ///The image displayed in image view.
     @IBInspectable
-    open var avatarImage: UIImage = UIImage() {
-        didSet {
-            avatarImageView.image = avatarImage
-        }
+    open var avatarImage: UIImage? {
+        get { return avatarImageView.image }
+        set { avatarImageView.image = newValue }
     }
     
     /// The view's background color.
     @IBInspectable
     open var avatarBackgroundColor: UIColor = ThemeManager.shared.color.gray4 {
-        didSet {
-            avatarImageView.backgroundColor = avatarBackgroundColor
-        }
+        didSet { avatarImageView.backgroundColor = avatarBackgroundColor }
     }
     
     /// The view's background color.
     @IBInspectable
     open var clickableImageBackgroundColor: UIColor = ThemeManager.shared.color.gray4 {
-        didSet {
-            clickableImageView.backgroundColor = clickableImageBackgroundColor
-        }
+        didSet { clickableImageView.backgroundColor = clickableImageBackgroundColor }
     }
     
     ///The image displayed in image view.
     @IBInspectable
-    open var clickableImage: UIImage = UIImage() {
-        didSet {
-            clickableImageView.image = clickableImage
-        }
+    open var clickableImage: UIImage? {
+        get { return clickableImageView.image }
+        set { clickableImageView.image = clickableImage }
     }
     
     /// The image height.
@@ -199,9 +174,7 @@ class Card11: CardView {
     
     // MARK: - Override
     override var nibName: String? {
-        get {
-            return "Card11"
-        }
+        return "Card11"
     }
     
     override internal func prepare() {
@@ -235,10 +208,10 @@ class Card11: CardView {
         clickableImageView.addGestureRecognizer(gestureRecognizer)
         clickableImageView.isUserInteractionEnabled = true
         
-        setLeftButtonTitle()
+        setLeftButtonTitle(leftButton.title(for: .normal))
         leftButton.addTarget(self, action: #selector(onLeftButtonClick), for: .touchUpInside)
         
-        setRightButtonTitle()
+        setRightButtonTitle(rightButton.title(for: .normal))
         rightButton.addTarget(self, action: #selector(onRightButtonClick), for: .touchUpInside)
         
     }
@@ -247,46 +220,37 @@ class Card11: CardView {
     private var leftButtonConstraints = [NSLayoutConstraint]()
     private var rightButtonConstraints = [NSLayoutConstraint]()
     
-    private func setLeftButtonTitle() {
+    private func setLeftButtonTitle(_ title: String?) {
         NSLayoutConstraint.deactivate(leftButtonConstraints)
         
-        leftButton.setTitle(leftButtonTitle, for: .normal)
+        leftButton.setTitle(title, for: .normal)
         leftButtonConstraints = [leftButton.widthAnchor.constraint(equalToConstant: leftButton.intrinsicContentSize.width + 16)]
         
         NSLayoutConstraint.activate(leftButtonConstraints)
     }
     
-    private func setRightButtonTitle() {
+    private func setRightButtonTitle(_ title: String?) {
         NSLayoutConstraint.deactivate(rightButtonConstraints)
         
-        rightButton.setTitle(rightButtonTitle, for: .normal)
+        rightButton.setTitle(title, for: .normal)
         rightButtonConstraints = [rightButton.widthAnchor.constraint(equalToConstant: rightButton.intrinsicContentSize.width + 16)]
         
         NSLayoutConstraint.activate(rightButtonConstraints)
     }
 }
 
-// MARK: - Protocol
-protocol Card11Protocol {
-    func onLeftButtonClick()
-    func onRightButtonClick()
-    func onImageClick()
-}
-
 // MARK: - objc func
 extension Card11 {
+    
     @objc func onLeftButtonClick() {
-        guard let callback = callback else { return }
-        callback.onLeftButtonClick()
+        delegate?.onLeftButtonClick()
     }
     
     @objc func onRightButtonClick() {
-        guard let callback = callback else { return }
-        callback.onRightButtonClick()
+        delegate?.onRightButtonClick()
     }
     
     @objc func onImageClick() {
-        guard let callback = callback else { return }
-        callback.onImageClick()
+        delegate?.onImageClick()
     }
 }

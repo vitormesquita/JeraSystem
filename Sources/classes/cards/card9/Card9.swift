@@ -8,15 +8,22 @@
 
 import UIKit
 
+
+// MARK: - Delegate
+protocol Card9Delegate: class {
+    func onLeftButtonClick()
+    func onRightButtonClick()
+}
+
 /**
  A card with title, body, image and two buttons.
- Needs a callback implementation.
+ Needs a delegate implementation.
  */
 @IBDesignable
 class Card9: CardView {
     
-    // MARK: - Callback
-    open var callback: Card9Protocol?
+    // MARK: - Delegate
+    open weak var delegate: Card9Delegate?
     
     // MARK: - Outlet
     @IBOutlet weak var imageView: UIImageView!
@@ -36,87 +43,70 @@ class Card9: CardView {
     
     ///The image displayed in image view.
     @IBInspectable
-    open var image: UIImage = UIImage() {
-        didSet {
-            imageView.image = image
-        }
+    open var image: UIImage? {
+        get { return imageView.image }
+        set { imageView.image = newValue }
     }
     
     @IBInspectable
-    open var leftButtonTitle: String = "Button" {
-        didSet {
-            setLeftButtonTitle()
-        }
+    open var leftButtonTitle: String? {
+        get { return leftButton.title(for: .normal) }
+        set { setLeftButtonTitle(newValue) }
     }
     
     @IBInspectable
-    open var rightButtonTitle: String = "Button" {
-        didSet {
-            setRightButtonTitle()
-        }
+    open var rightButtonTitle: String? {
+        get { return rightButton.title(for: .normal) }
+        set { setRightButtonTitle(newValue) }
     }
     
     /// The maximum number of lines to use for rendering text.
     @IBInspectable
     open var bodyNumberOfLines: Int = 1 {
-        didSet {
-            bodyLabel.numberOfLines = bodyNumberOfLines
-        }
+        didSet { bodyLabel.numberOfLines = bodyNumberOfLines }
     }
     
     /// The current text that is displayed by the label
     @IBInspectable
-    open var titleText: String = "Card 9 Title" {
-        didSet {
-            titleLabel.text = titleText
-        }
+    open var titleText: String? {
+        get { return titleLabel.text }
+        set { titleLabel.text = newValue }
     }
     
     /// The font used to display the text.
     @IBInspectable
     open var titleFont: UIFont = ThemeManager.shared.font.headline5 {
-        didSet {
-            titleLabel.font = titleFont
-        }
+        didSet { titleLabel.font = titleFont }
     }
     
     /// The color of the text.
     @IBInspectable
     open var titleColor: UIColor = ThemeManager.shared.color.gray2 {
-        didSet {
-            titleLabel.textColor = titleColor
-        }
+        didSet { titleLabel.textColor = titleColor }
     }
     
     /// The current text that is displayed by the label
     @IBInspectable
-    open var bodyText: String = "Card 9 Body" {
-        didSet {
-            bodyLabel.text = bodyText
-        }
+    open var bodyText: String? {
+        get { return bodyLabel.text }
+        set { bodyLabel.text = newValue }
     }
     
     /// The font used to display the text.
     @IBInspectable
     open var bodyFont: UIFont = ThemeManager.shared.font.body2 {
-        didSet {
-            bodyLabel.font = bodyFont
-        }
+        didSet { bodyLabel.font = bodyFont }
     }
     
     /// The color of the text.
     @IBInspectable
     open var bodyColor: UIColor = ThemeManager.shared.color.gray3 {
-        didSet {
-            bodyLabel.textColor = bodyColor
-        }
+        didSet { bodyLabel.textColor = bodyColor }
     }
     
     // MARK: - Override
     override var nibName: String? {
-        get {
-            return "Card9"
-        }
+        return "Card9"
     }
     
     override internal func prepare() {
@@ -135,11 +125,10 @@ class Card9: CardView {
         bodyLabel.textColor = bodyColor
         bodyLabel.text = bodyText
         
-        
-        setLeftButtonTitle()
+        setLeftButtonTitle(leftButton.title(for: .normal))
         leftButton.addTarget(self, action: #selector(onLeftButtonClick), for: .touchUpInside)
         
-        setRightButtonTitle()
+        setRightButtonTitle(rightButton.title(for: .normal))
         rightButton.addTarget(self, action: #selector(onRightButtonClick), for: .touchUpInside)
         
     }
@@ -148,40 +137,32 @@ class Card9: CardView {
     private var leftButtonConstraints = [NSLayoutConstraint]()
     private var rightButtonConstraints = [NSLayoutConstraint]()
     
-    private func setLeftButtonTitle() {
+    private func setLeftButtonTitle(_ title: String?) {
         NSLayoutConstraint.deactivate(leftButtonConstraints)
         
-        leftButton.setTitle(leftButtonTitle, for: .normal)
+        leftButton.setTitle(title, for: .normal)
         leftButtonConstraints = [leftButton.widthAnchor.constraint(equalToConstant: leftButton.intrinsicContentSize.width + 16)]
         
         NSLayoutConstraint.activate(leftButtonConstraints)
     }
     
-    private func setRightButtonTitle() {
+    private func setRightButtonTitle(_ title: String?) {
         NSLayoutConstraint.deactivate(rightButtonConstraints)
         
-        rightButton.setTitle(rightButtonTitle, for: .normal)
+        rightButton.setTitle(title, for: .normal)
         rightButtonConstraints = [rightButton.widthAnchor.constraint(equalToConstant: rightButton.intrinsicContentSize.width + 16)]
         
         NSLayoutConstraint.activate(rightButtonConstraints)
     }
 }
 
-// MARK: - Protocol
-protocol Card9Protocol {
-    func onLeftButtonClick()
-    func onRightButtonClick()
-}
-
 // MARK: - objc func
 extension Card9 {
     @objc func onLeftButtonClick() {
-        guard let callback = callback else { return }
-        callback.onLeftButtonClick()
+        delegate?.onLeftButtonClick()
     }
     
     @objc func onRightButtonClick() {
-        guard let callback = callback else { return }
-        callback.onRightButtonClick()
+        delegate?.onRightButtonClick()
     }
 }

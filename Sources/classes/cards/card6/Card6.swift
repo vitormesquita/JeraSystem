@@ -35,113 +35,90 @@ class Card6: CardView {
     /// The view's background color.
     @IBInspectable
     open var imageBackgroundColor: UIColor = ThemeManager.shared.color.gray4 {
-        didSet {
-            imageView.backgroundColor = imageBackgroundColor
-        }
+        didSet { imageView.backgroundColor = imageBackgroundColor }
     }
     
     ///The image displayed in image view.
     @IBInspectable
-    open var image: UIImage = UIImage() {
-        didSet {
-            imageView.image = image
-        }
+    open var image: UIImage? {
+        get { return imageView.image }
+        set { imageView.image = newValue }
     }
     
     ///The image displayed in image view.
     @IBInspectable
-    open var avatarImage: UIImage = UIImage() {
-        didSet {
-            avatarImageView.image = avatarImage
-        }
+    open var avatarImage: UIImage? {
+        get { return avatarImageView.image }
+        set { avatarImageView.image = newValue }
     }
     
     /// The view's background color.
     @IBInspectable
     open var avatarBackgroundColor: UIColor = ThemeManager.shared.color.gray4 {
-        didSet {
-            avatarImageView.backgroundColor = avatarBackgroundColor
-        }
+        didSet { avatarImageView.backgroundColor = avatarBackgroundColor }
     }
     
     /// The current text that is displayed by the label
     @IBInspectable
-    open var titleText: String = "Card 6 Title" {
-        didSet {
-            titleLabel.text = titleText
-        }
+    open var titleText: String? {
+        get { return titleLabel.text }
+        set { titleLabel.text = newValue }
     }
     
     /// The font used to display the text.
     @IBInspectable
     open var titleFont: UIFont = ThemeManager.shared.font.headline6 {
-        didSet {
-            titleLabel.font = titleFont
-        }
+        didSet { titleLabel.font = titleFont }
     }
     
     /// The color of the text.
     @IBInspectable
     open var titleColor: UIColor = ThemeManager.shared.color.gray2 {
-        didSet {
-            titleLabel.textColor = titleColor
-        }
+        didSet { titleLabel.textColor = titleColor }
     }
     
     /// The current text that is displayed by the label
     @IBInspectable
-    open var subtitleText: String = "Card 6 Subtitle" {
-        didSet {
-            subtitleLabel.text = subtitleText
-        }
+    open var subtitleText: String? {
+        get { return subtitleLabel.text }
+        set { subtitleLabel.text = newValue }
     }
     
     /// The font used to display the text.
     @IBInspectable
     open var subtitleFont: UIFont = ThemeManager.shared.font.body2 {
-        didSet {
-            subtitleLabel.font = subtitleFont
-        }
+        didSet { subtitleLabel.font = subtitleFont }
     }
     
     /// The color of the text.
     @IBInspectable
     open var subtitleColor: UIColor = ThemeManager.shared.color.gray2 {
-        didSet {
-            subtitleLabel.textColor = subtitleColor
-        }
+        didSet { subtitleLabel.textColor = subtitleColor }
     }
     
     /// The current text that is displayed by the label
     @IBInspectable
-    open var bodyText: String = "Card 6 Body" {
-        didSet {
-            bodyLabel.text = bodyText
-        }
+    open var bodyText: String? {
+        get { return bodyLabel.text }
+        set { bodyLabel.text = newValue }
     }
     
     /// The font used to display the text.
     @IBInspectable
     open var bodyFont: UIFont = ThemeManager.shared.font.body2 {
-        didSet {
-            bodyLabel.font = bodyFont
-        }
+        didSet { bodyLabel.font = bodyFont }
     }
     
     /// The color of the text.
     @IBInspectable
     open var bodyColor: UIColor = ThemeManager.shared.color.gray1 {
-        didSet {
-            bodyLabel.textColor = bodyColor
-        }
+        didSet { bodyLabel.textColor = bodyColor }
     }
     
     
     // MARK: - Override
     override var nibName: String? {
-        get {
-            return "Card6"
-        }
+        return "Card6"
     }
     
     override internal func prepare() {

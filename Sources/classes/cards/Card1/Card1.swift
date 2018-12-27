@@ -10,9 +10,9 @@ import UIKit
 
 /**
  A card with title and body.
-*/
+ */
 @IBDesignable
-class SimpleCard: CardView {
+class Card1: CardView {
     
     // MARK: - Outlet
     @IBOutlet private weak var titleLabel: UILabel!
@@ -22,74 +22,57 @@ class SimpleCard: CardView {
     /// The maximum number of lines to use for rendering text.
     @IBInspectable
     open var titleNumberOfLines: Int = 1 {
-        didSet {
-            titleLabel.numberOfLines = titleNumberOfLines
-        }
+        didSet { titleLabel.numberOfLines = titleNumberOfLines }
     }
     
     /// The color of the text.
     @IBInspectable
     var titleColor: UIColor = ThemeManager.shared.color.surface {
-        didSet {
-            titleLabel.textColor = titleColor
-        }
+        didSet { titleLabel.textColor = titleColor }
     }
     
     /// The font used to display the text.
     @IBInspectable
     open var titleFont: UIFont = ThemeManager.shared.font.subtitle1 {
-        didSet {
-            titleLabel.font = titleFont
-        }
+        didSet { titleLabel.font = titleFont }
     }
     
     /// The current text that is displayed by the label
     @IBInspectable
-    open var titleText: String = "Simple Card Title" {
-        didSet {
-            titleLabel.text = titleText
-        }
+    open var titleText: String? {
+        get { return titleLabel.text }
+        set { titleLabel.text = newValue }
     }
     
     /// The maximum number of lines to use for rendering text.
     @IBInspectable
     open var bodyNumberOfLines: Int = 1 {
-        didSet {
-            bodyLabel.numberOfLines = bodyNumberOfLines
-        }
+        didSet { bodyLabel.numberOfLines = bodyNumberOfLines }
     }
     
     /// The color of the text.
     @IBInspectable
     open var bodyColor: UIColor = ThemeManager.shared.color.surface {
-        didSet {
-            bodyLabel.textColor = bodyColor
-        }
+        didSet { bodyLabel.textColor = bodyColor }
     }
     
     /// The font used to display the text.
     @IBInspectable
     open var bodyFont: UIFont = ThemeManager.shared.font.caption {
-        didSet {
-            bodyLabel.font = bodyFont
-        }
+        didSet { bodyLabel.font = bodyFont }
     }
     
     /// The current text that is displayed by the label
     @IBInspectable
-    open var bodyText: String = "Simple Card Body" {
-        didSet {
-            bodyLabel.text = bodyText
-        }
+    open var bodyText: String? {
+        get { return bodyLabel.text }
+        set { bodyLabel.text = newValue }
     }
     
     // MARK: - Override
     override var nibName: String? {
-        get {
-            return "SimpleCard"
-        }
+        return "Card1"
     }
-    
     
     override internal func prepare() {
         super.prepare()

@@ -8,15 +8,20 @@
 
 import UIKit
 
+// MARK: - Delegate
+protocol Card4Delegate: class {
+    func onImageClick()
+}
+
 /**
  A card with image, avatar, title and clickable image.
- Needs a callback implementation.
+ Needs a delegate implementation.
  */
 @IBDesignable
 class Card4: CardView {
     
-    // MARK: - Callback
-    open var callback: Card4Protocol?
+    // MARK: - Delegate
+    open weak var delegate: Card4Delegate?
     
     // MARK: - Outlet
     @IBOutlet weak var imageView: UIImageView!
@@ -29,9 +34,7 @@ class Card4: CardView {
     /// The view's background color.
     @IBInspectable
     open var imageBackgroundColor: UIColor = ThemeManager.shared.color.gray4 {
-        didSet {
-            imageView.backgroundColor = imageBackgroundColor
-        }
+        didSet { imageView.backgroundColor = imageBackgroundColor }
     }
     
     /// The image height.
@@ -45,81 +48,65 @@ class Card4: CardView {
     
     ///The image displayed in image view.
     @IBInspectable
-    open var image: UIImage = UIImage() {
-        didSet {
-            imageView.image = image
-        }
+    open var image: UIImage? {
+        get { return imageView.image }
+        set { imageView.image = newValue }
     }
     
     ///The image displayed in image view.
     @IBInspectable
-    open var avatarImage: UIImage = UIImage() {
-        didSet {
-            avatarImageView.image = avatarImage
-        }
+    open var avatarImage: UIImage? {
+        get { return avatarImageView.image }
+        set { avatarImageView.image = newValue }
     }
     
     /// The view's background color.
     @IBInspectable
     open var avatarBackgroundColor: UIColor = ThemeManager.shared.color.gray4 {
-        didSet {
-            avatarImageView.backgroundColor = avatarBackgroundColor
-        }
+        didSet { avatarImageView.backgroundColor = avatarBackgroundColor }
     }
     
     /// The view's background color.
     @IBInspectable
     open var clickableImageBackgroundColor: UIColor = ThemeManager.shared.color.gray4 {
-        didSet {
-            clickableImageView.backgroundColor = clickableImageBackgroundColor
-        }
+        didSet { clickableImageView.backgroundColor = clickableImageBackgroundColor }
     }
     
     ///The image displayed in image view.
     @IBInspectable
-    open var clickableImage: UIImage = UIImage() {
-        didSet {
-            clickableImageView.image = clickableImage
-        }
+    open var clickableImage: UIImage? {
+        get { return clickableImageView.image }
+        set { clickableImageView.image = newValue }
     }
     
     /// The maximum number of lines to use for rendering text.
     @IBInspectable
     open var titleNumberOfLines: Int = 1 {
-        didSet {
-            titleLabel.numberOfLines = titleNumberOfLines
-        }
+        didSet { titleLabel.numberOfLines = titleNumberOfLines }
     }
     
     /// The current text that is displayed by the label
     @IBInspectable
-    open var titleText: String = "Card 4 Title" {
-        didSet {
-            titleLabel.text = titleText
-        }
+    open var titleText: String? {
+        get { return titleLabel.text }
+        set { titleLabel.text = newValue }
     }
     
     /// The font used to display the text.
     @IBInspectable
     open var titleFont: UIFont = ThemeManager.shared.font.headline6 {
-        didSet {
-            titleLabel.font = titleFont
-        }
+        didSet { titleLabel.font = titleFont }
     }
     
     /// The color of the text.
     @IBInspectable
     open var titleColor: UIColor = ThemeManager.shared.color.primary {
-        didSet {
-            titleLabel.textColor = titleColor
-        }
+        didSet { titleLabel.textColor = titleColor }
     }
 
     // MARK: - Override
     override var nibName: String? {
-        get {
-            return "Card4"
-        }
+        return "Card4"
     }
     
     override internal func prepare() {
@@ -144,15 +131,10 @@ class Card4: CardView {
     }
 }
 
-// MARK: - Protocol
-protocol Card4Protocol {
-    func onImageClick()
-}
-
 // MARK: - objc func
 extension Card4 {
+    
     @objc func onImageClick() {
-        guard let callback = callback else { return }
-        callback.onImageClick()
+        delegate?.onImageClick()
     }
 }

@@ -14,15 +14,11 @@ class CardView: UIView {
     internal var configurableConstraints = [NSLayoutConstraint]()
     
     internal var nibName: String? {
-        get {
-            return nil
-        }
+        return nil
     }
     
-    private var shadow: Shadow = .shadow12 {
-        didSet {
-            configureShadow()
-        }
+    open var shadow: Shadow = .shadow12 {
+        didSet { configureShadow() }
     }
     
     // MARK: - Inspectable
@@ -84,14 +80,13 @@ class CardView: UIView {
         contentView.backgroundColor = .clear
         
         addSubview(contentView)
+        self.contentView = contentView
     }
 }
 
 // MARK - Private func
 extension CardView {
     
-    /**
-     */
     private func configureShadow() {
         layer.shadowOpacity = shadow.opacity
         layer.shadowOffset = shadow.offeset
