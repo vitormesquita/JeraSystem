@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Card4">
+            <connections>
+                <outlet property="avatarImageView" destination="65u-NK-KEp" id="agj-wf-eSA"/>
+                <outlet property="clickableImageView" destination="cSy-ja-Pbt" id="hbp-8j-rJF"/>
+                <outlet property="imageConstraintHeight" destination="wY3-RZ-obA" id="UrI-md-0UI"/>
+                <outlet property="imageView" destination="h0K-R5-FAH" id="4Hp-aw-ICy"/>
+                <outlet property="titleLabel" destination="vgF-bq-Efs" id="wXr-Ij-q41"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="305"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h0K-R5-FAH">
+                    <rect key="frame" x="0.0" y="0.0" width="321" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="wY3-RZ-obA"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="65u-NK-KEp">
+                    <rect key="frame" x="19" y="259" width="27" height="27"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="27" id="fQw-kG-Dz5"/>
+                        <constraint firstAttribute="height" constant="27" id="hOp-sn-Qb0"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgF-bq-Efs">
+                    <rect key="frame" x="65" y="262" width="197" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cSy-ja-Pbt">
+                    <rect key="frame" x="281" y="260.5" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="SSs-1D-4zp"/>
+                        <constraint firstAttribute="height" constant="24" id="nEf-gB-pNg"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="h0K-R5-FAH" secondAttribute="trailing" id="7ly-R2-YZq"/>
+                <constraint firstItem="h0K-R5-FAH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Aty-xc-hjA"/>
+                <constraint firstItem="65u-NK-KEp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="19" id="Gyh-YG-mVO"/>
+                <constraint firstItem="65u-NK-KEp" firstAttribute="top" secondItem="h0K-R5-FAH" secondAttribute="bottom" constant="19" id="Nw2-A2-b6a"/>
+                <constraint firstItem="cSy-ja-Pbt" firstAttribute="centerY" secondItem="vgF-bq-Efs" secondAttribute="centerY" id="Qrn-60-KRF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cSy-ja-Pbt" secondAttribute="trailing" constant="16" id="W06-yo-8Qu"/>
+                <constraint firstItem="h0K-R5-FAH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Xdt-iJ-SqJ"/>
+                <constraint firstItem="cSy-ja-Pbt" firstAttribute="leading" secondItem="vgF-bq-Efs" secondAttribute="trailing" constant="19" id="ckI-eD-Pzs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="65u-NK-KEp" secondAttribute="bottom" constant="19" id="df6-RP-cJy"/>
+                <constraint firstItem="vgF-bq-Efs" firstAttribute="centerY" secondItem="65u-NK-KEp" secondAttribute="centerY" id="j7x-Zw-cBC"/>
+                <constraint firstItem="vgF-bq-Efs" firstAttribute="leading" secondItem="65u-NK-KEp" secondAttribute="trailing" constant="19" id="s5S-8y-4Nx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="97" y="-12"/>
+        </view>
+    </objects>
+</document>

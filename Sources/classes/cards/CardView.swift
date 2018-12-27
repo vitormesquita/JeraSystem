@@ -8,28 +8,35 @@
 
 import UIKit
 
-@IBDesignable
 class CardView: UIView {
     
-    private let containerView = UIView()
-    private var containerConstraints = [NSLayoutConstraint]()
+    internal var contentView: UIView?
+    internal var configurableConstraints = [NSLayoutConstraint]()
     
-    @IBInspectable
-    var margin: CGFloat = 16 {
-        didSet {
-            configureContainerConstraints()
-        }
+    internal var nibName: String? {
+        return nil
     }
     
-    var shadow: Shadow = .shadow12 {
+    open var shadow: Shadow = .shadow12 {
+        didSet { configureShadow() }
+    }
+    
+    // MARK: - Inspectable
+    @IBInspectable
+    open var cornerRadius: CGFloat = 8 {
         didSet {
-            configureContainerShadow()
+            layer.cornerRadius = cornerRadius
+    
+            guard let contentView = contentView else { return }
+            contentView.layer.cornerRadius = cornerRadius
         }
     }
  
+    // MARK: - Init
     override init(frame: CGRect) {
-        super.init(frame: .zero)
+        super.init(frame: frame)
         prepare()
+        translatesAutoresizingMaskIntoConstraints = false
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,39 +44,51 @@ class CardView: UIView {
         prepare()
     }
     
+    // MARK: - Override
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        prepare()
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        // Necessary to correctly render
+        translatesAutoresizingMaskIntoConstraints = true
+        
+        prepare()
+        contentView?.prepareForInterfaceBuilder()
+    }
+    
+    // MARK: - Internal
+    /// Called when object is initialized to apply initial configuration
     internal func prepare() {
-        self.addSubview(containerView)
+        backgroundColor = .white
+        layer.cornerRadius = cornerRadius
         
-        containerView.layer.cornerRadius = 4
-        containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.backgroundColor = ThemeManager.shared.color.background
+        configureShadow()
         
-        configureContainerShadow()
-        configureContainerConstraints()
+        guard let nibName = nibName else { return }
+        
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: nibName, bundle: bundle)
+        
+        guard let contentView = (nib.instantiate(withOwner: self, options: nil).first as? UIView) else { return }
+        contentView.frame = bounds
+        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        contentView.layer.cornerRadius = cornerRadius
+        contentView.clipsToBounds = true
+        contentView.backgroundColor = .clear
+        
+        addSubview(contentView)
+        self.contentView = contentView
     }
 }
 
+// MARK - Private func
 extension CardView {
     
-    /**
-     */
-    private func configureContainerConstraints() {
-        NSLayoutConstraint.deactivate(containerConstraints)
-        
-        containerConstraints = [
-            containerView.topAnchor.constraint(equalTo: self.topAnchor, constant: margin),
-            containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -margin),
-            containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: margin),
-            containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -margin)
-        ]
-        
-        NSLayoutConstraint.activate(containerConstraints)
-    }
-    
-    /**
-     */
-    private func configureContainerShadow() {
-        containerView.layer.shadowOpacity = shadow.opacity
-        containerView.layer.shadowOffset = shadow.offeset
+    private func configureShadow() {
+        layer.shadowOpacity = shadow.opacity
+        layer.shadowOffset = shadow.offeset
     }
 }
