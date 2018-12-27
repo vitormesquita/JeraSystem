@@ -106,8 +106,8 @@
 		57E5AB3021D4FED8009CFD55 /* card13 */ = {
 			isa = PBXGroup;
 			children = (
-				57E5AB3121D4FED8009CFD55 /* Card13.xib */,
 				57E5AB3221D4FED8009CFD55 /* Card13.swift */,
+				57E5AB3121D4FED8009CFD55 /* Card13.xib */,
 			);
 			path = card13;
 			sourceTree = "<group>";
@@ -142,8 +142,8 @@
 		57E5AB3C21D4FED8009CFD55 /* Card1 */ = {
 			isa = PBXGroup;
 			children = (
-				57E5AB3D21D4FED8009CFD55 /* Card1.xib */,
 				57E5AB3E21D4FED8009CFD55 /* Card1.swift */,
+				57E5AB3D21D4FED8009CFD55 /* Card1.xib */,
 			);
 			path = Card1;
 			sourceTree = "<group>";
@@ -151,8 +151,8 @@
 		57E5AB3F21D4FED9009CFD55 /* card10 */ = {
 			isa = PBXGroup;
 			children = (
-				57E5AB4021D4FED9009CFD55 /* Card10.xib */,
 				57E5AB4121D4FED9009CFD55 /* Card10.swift */,
+				57E5AB4021D4FED9009CFD55 /* Card10.xib */,
 			);
 			path = card10;
 			sourceTree = "<group>";
@@ -160,8 +160,8 @@
 		57E5AB4221D4FED9009CFD55 /* card11 */ = {
 			isa = PBXGroup;
 			children = (
-				57E5AB4321D4FED9009CFD55 /* Card11.xib */,
 				57E5AB4421D4FED9009CFD55 /* Card11.swift */,
+				57E5AB4321D4FED9009CFD55 /* Card11.xib */,
 			);
 			path = card11;
 			sourceTree = "<group>";
@@ -187,8 +187,8 @@
 		57E5AB4B21D4FED9009CFD55 /* card9 */ = {
 			isa = PBXGroup;
 			children = (
-				57E5AB4C21D4FED9009CFD55 /* Card9.xib */,
 				57E5AB4D21D4FED9009CFD55 /* Card9.swift */,
+				57E5AB4C21D4FED9009CFD55 /* Card9.xib */,
 			);
 			path = card9;
 			sourceTree = "<group>";
@@ -196,8 +196,8 @@
 		57E5AB4E21D4FED9009CFD55 /* card12 */ = {
 			isa = PBXGroup;
 			children = (
-				57E5AB4F21D4FED9009CFD55 /* Card12.xib */,
 				57E5AB5021D4FED9009CFD55 /* Card12.swift */,
+				57E5AB4F21D4FED9009CFD55 /* Card12.xib */,
 			);
 			path = card12;
 			sourceTree = "<group>";
